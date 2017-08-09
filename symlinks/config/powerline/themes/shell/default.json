@@ -21,7 +21,7 @@
 						"function": "powerline.segments.common.env.user",
 						"priority": 15,
 						"args": {
-							"hide_user": "ari"
+							"hide_user": "ariporad"
 						}
 					},
 					{
