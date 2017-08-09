@@ -1,0 +1,25 @@
+{
+	"casks": [],
+	"formulas": [
+		"certbot",
+		"direnv",
+		"git",
+		"hub",
+		"mobile-shell",
+		"node",
+		"python3",
+		"vim",
+		"wget",
+		"yarn"
+	],
+	"symlinks": {
+		"config/*": "~/.config/",
+		"misc/.*": "~",
+		"vim/*": "~/.vim/",
+		"vim/.*": "~"
+	},
+	"taps": [
+		"caskroom/cask",
+		"homebrew/core"
+	]
+}
