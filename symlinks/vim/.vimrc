@@ -91,7 +91,7 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 autocmd FileType javascript set formatprg=prettier-eslint\ --stdin\ --use-tabs\ --single-quote\ --trailing-comma\ es5\ --parser\ babylon
-autocmd FileType json set formatprg=prettier-eslint\ --stdin\ --print-width\ 4\ --use-tabs\ --single-quote\ --trailing-comma\ es5\ --parser\ json
+autocmd FileType json set formatprg=prettier-eslint\ --stdin\ --print-width\ 4\ --use-tabs\ --single-quote\ --parser\ json
 autocmd FileType jsx set formatprg=prettier-eslint\ --stdin\ --print-width\ 4\ --use-tabs\ --single-quote\ --trailing-comma\ es5\ --parser\ babylon
 
 autocmd BufWritePre *.js,*.jsx,*.es,*.es6,*.json :normal gggqG
