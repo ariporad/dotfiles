@@ -150,10 +150,6 @@ export PATH="$PATH:`yarn global bin`"
 
 eval "$(direnv hook zsh)"
 
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
 powerline-daemon -q
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
