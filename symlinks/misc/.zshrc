@@ -141,10 +141,7 @@ export PATH=$PATH:~/.bin
 export GIT_EDITOR="vim"
 export CASTBRIDGE_ANALYTICS=false
 
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
-
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
-
 
 export PATH="$PATH:`yarn global bin`"
 
@@ -158,3 +155,7 @@ eval "$(ssh-agent)" > /dev/null
 # Local Config
 # https://unix.stackexchange.com/a/190864
 [ -f .profile ] && source .profile
+
+eval $(thefuck --alias)
+
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH="$N_PREFIX/bin:$PATH"  # Added by n-install (see http://git.io/n-install-repo).

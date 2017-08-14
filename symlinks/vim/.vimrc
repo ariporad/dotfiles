@@ -1,5 +1,4 @@
 set nocompatible
-set backspace=indent,eol,start
 
 let mapleader=","
 
@@ -73,6 +72,21 @@ augroup END
 Plug 'moll/vim-node'
 Plug 'ternjs/tern_for_vim'
 Plug 'pangloss/vim-javascript'
+Plug 'prettier/vim-prettier', {
+    \ 'do': 'npm install',
+    \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss'] }
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.css,*.scss,*.less Prettier
+let g:prettier#config#print_width = 100
+let g:prettier#config#tab_width = 4
+let g:prettier#config#use_tabs = 'true'
+let g:prettier#config#semi = 'true'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'true'
+let g:prettier#config#trailing_comma = 'es5'
+let g:prettier#config#parser = 'babylon'
+
 
 " Python
 Plug 'hynek/vim-python-pep8-indent'
@@ -89,12 +103,6 @@ Plug 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call plug#end()
-
-autocmd FileType javascript set formatprg=prettier-eslint\ --stdin\ --use-tabs\ --single-quote\ --trailing-comma\ es5\ --parser\ babylon
-autocmd FileType json set formatprg=prettier-eslint\ --stdin\ --print-width\ 4\ --use-tabs\ --single-quote\ --parser\ json
-autocmd FileType jsx set formatprg=prettier-eslint\ --stdin\ --print-width\ 4\ --use-tabs\ --single-quote\ --trailing-comma\ es5\ --parser\ babylon
-
-autocmd BufWritePre *.js,*.jsx,*.es,*.es6,*.json :normal gggqG
 
 set number
 colorscheme moody
@@ -115,3 +123,4 @@ set preserveindent
 set softtabstop=0
 set shiftwidth=4
 set tabstop=4
+set backspace=indent,eol,start

@@ -1,43 +1,45 @@
 {
-	"casks": [
-		"airfoil",
-		"alfred",
-		"atom",
-		"bartender",
-		"crashplan",
-		"google-chrome",
-		"insomniax",
-		"istat-menus",
-		"karabiner-elements",
-		"mactracker",
-		"omnifocus",
-		"selfcontrol",
-		"sizeup",
-		"soulver",
-		"vlc",
-		"1password"
-	],
-	"formulas": [
-		"direnv",
-		"git",
-		"gnupg",
-		"gpg-agent",
-		"hub",
-		"macvim --with-cscope --with-lua --with-override-system-vim --with-luajit --with-python",
-		"mobile-shell",
-		"node",
-		"python3",
-		"wget",
-		"yarn"
-	],
-	"symlinks": {
-		"config/*": "~/.config/",
-		"misc/.*": "~",
-		"vim/*": "~/.vim/",
-		"vim/.*": "~"
-	},
-	"taps": [
-		"caskroom/cask",
-		"homebrew/core"
-	]
+    "casks": [
+        "airfoil",
+        "alfred",
+        "atom",
+        "bartender",
+        "crashplan",
+        "google-chrome",
+        "insomniax",
+        "istat-menus",
+        "karabiner-elements",
+        "mactracker",
+        "omnifocus",
+        "selfcontrol",
+        "sizeup",
+        "soulver",
+        "vlc",
+        "1password"
+    ],
+    "formulas": [
+        "direnv",
+        "ffmpeg",
+        "git",
+        "gnupg",
+        "gpg-agent",
+        "hub",
+        "macvim --with-cscope --with-lua --with-override-system-vim --with-luajit --with-python",
+        "mobile-shell",
+        "node",
+        "python3",
+        "thefuck",
+        "wget",
+        "yarn"
+    ],
+    "symlinks": {
+        "config/*": "~/.config/",
+        "misc/.*": "~",
+        "vim/*": "~/.vim/",
+        "vim/.*": "~"
+    },
+    "taps": [
+        "caskroom/cask",
+        "homebrew/core"
+    ]
 }
