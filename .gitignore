@@ -1,6 +1,9 @@
 
 # Created by https://www.gitignore.io/api/vim,git,node,macos
 
+### Machine-Specific ###
+symlinks/config/configstore/update-notifier-npm.json
+
 ### Git ###
 *.orig
 
