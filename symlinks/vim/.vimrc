@@ -41,6 +41,9 @@ call plug#begin('~/.vim/plugged')
 "let g:vimfiler_as_default_explorer = 1
 "let g:vimfiler_ignore_pattern = '^\%(\.git\|\.DS_Store\)$'
 
+" Pretty Writing
+Plug 'junegunn/goyo.vim'
+
 " Allow Auto-Commenting
 Plug 'scrooloose/nerdcommenter'
 
