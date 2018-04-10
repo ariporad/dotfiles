@@ -2,3 +2,9 @@
 [user]
 	name = Ari Porad
 	email = ari@ariporad.com
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore_global
+[rerere]
+	enabled = true

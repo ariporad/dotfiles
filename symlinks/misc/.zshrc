@@ -131,6 +131,14 @@ alias cm="git commit"
 alias a="git add"
 alias d="git diff" # Note: oh-my-zsh aliases this to `dirs`, but I don't care.
 alias dc="git diff --cached"
+alias co="git checkout"
+alias cz="git cz"
+alias pi="ping 8.8.8.8"
+
+function byword() {
+	touch "$1"
+	open -a /Applications/Byword.app "$1"
+}
 
 # Modify $PATH
 export PATH=/usr/local/bin:$PATH
@@ -144,6 +152,9 @@ export CASTBRIDGE_ANALYTICS=false
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
 export PATH="$PATH:`yarn global bin`"
+export PATH="$PATH:/Library/TeX/texbin"
+export PATH="$PATH:/Users/ariporad/Library/Android/sdk/platform-tools" # I hate Android Studio
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin" # I'm undecided on Postgres.app
 
 eval "$(direnv hook zsh)"
 
@@ -152,6 +163,15 @@ powerline-daemon -q
 
 eval "$(ssh-agent)" > /dev/null
 
+[ -f ~/dev/schoolkit/index.sh ] && source ~/dev/schoolkit/index.sh
+
+function beep_loop() {
+	while true; do
+		sleep $1
+		beep
+	done
+}
+
 # Local Config
 # https://unix.stackexchange.com/a/190864
 [ -f .profile ] && source .profile
@@ -159,3 +179,13 @@ eval "$(ssh-agent)" > /dev/null
 eval $(thefuck --alias)
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH="$N_PREFIX/bin:$PATH"  # Added by n-install (see http://git.io/n-install-repo).
+
+# Put the directory in the title bar so Timing can see it
+precmd() {
+	echo -ne "\033]0;${PWD/#$HOME/~}\007"
+}
+
+# added by travis gem
+[ -f /Users/ariporad/.travis/travis.sh ] && source /Users/ariporad/.travis/travis.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
