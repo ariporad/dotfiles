@@ -1,98 +1,11 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/ariporad/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-#ZSH_THEME="ariporad/ariporad"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
+####################################################################################################
+# Oh-My-Zsh
+####################################################################################################
+export ZSH=/Users/ariporad/.oh-my-zsh # Path to Oh-My-Zsh
 DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-# plugins=(git node npm brew osx)
-
-# User configuration
-
-export PORT=8080 # A sane default
-export NODE_ENV=development
-export EDITOR='vim'
-export FZF_DEFAULT_COMMAND='ag --ignore node_modules -g "" --nocolor'
-
-# Fix Encoding
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
-alias git='hub' # https://hub.github.com/
-alias z='fg %1'
-alias zz='fg %2'
-alias zzz='fg %3'
-alias zzzz='fg %4'
-alias zzzzz='fg %5'
-
-
-function ca() {
-  git add .
-  if [ -z "$1" ]; then # no args
-    git commit -a
-  else
-    git commit -am $@
-  fi
-}
-
-function beep() {
-	osascript -e 'beep'
-}
-
-alias hosts='sudo nano /private/etc/hosts;dscacheutil -flushcache;sudo killall -HUP mDNSResponder'
-
-function viminstall() {
-  # Install vim plugins
-  vim +PlugInstall +qall
-}
-
-
 source $ZSH/oh-my-zsh.sh
-
+#
 # Use Vi mode
 export KEYTIMEOUT=1
 bindkey -v
@@ -102,91 +15,119 @@ bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
+# TODO: Dvorak Remap
 
-# gitignore.io
+
+####################################################################################################
+# Misc. ENV
+####################################################################################################
+
+# Sane Defaults
+export PORT=8080 # A sane default
+export NODE_ENV=development
+
+# Editors
+alias vi="vim" # MWAAAAAA HAAAAA HAAAAA HAAAAA HAAAAAA
+export EDITOR='vim'
+export GIT_EDITOR="vim"
+export CASTBRIDGE_ANALYTICS=false
+
+# Fix Encoding Problems
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Default Options for Some Commands
+export LESS="-FXRS"
+export PGDATA="/usr/local/var/postgres"
+export FZF_DEFAULT_COMMAND='ag --ignore node_modules -g "" --nocolor'
+
+
+####################################################################################################
+# Helpers
+####################################################################################################
+
+# Commonly used for `do_long_thing && beep`
+function beep() { osascript -e 'beep' }
+
+# Handy shortcut to edit the hosts file
+function hosts() {
+	sudo $EDITOR /private/etc/hosts
+	dscacheutil -flushcache
+	sudo killall -HUP mDNSResponder
+}
+
+# Generate a .gitignore
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
-function whosOnPort(){
-	lsof -n -i4TCP:$1 | grep LISTEN
-}
+# This has been somewhat replaced by fkill
+function whosOnPort(){ lsof -n -i4TCP:$1 | grep LISTEN }
 
-# http://superuser.com/a/599156
-function title() {
-  echo -ne "\033]0;"$*"\007"
-}
+# Set the title of the terminal: http://superuser.com/a/599156
+function settitle() { echo -ne "\033]0;"$*"\007" }
 
-function git-authors(){
-	git ls-tree -r -z --name-only HEAD -- $1 | xargs -0 -n1 git blame \
- --line-porcelain HEAD |grep "^author "|sort|uniq -c|sort -nr
-}
-
-# Force options for commands
-alias pg="postgres -D /usr/local/var/postgres"
-alias postgres="postgres -D /usr/local/var/postgres"
-alias ll="ls -lah"
-
-# Aliases
-alias s="git status"
-alias c="git commit -m"
-alias cm="git commit"
-alias a="git add"
-alias d="git diff" # Note: oh-my-zsh aliases this to `dirs`, but I don't care.
-alias dc="git diff --cached"
-alias co="git checkout"
-alias cz="git cz"
-alias pi="ping 8.8.8.8"
-
+# Open files in Byword from the terminal
 function byword() {
 	touch "$1"
 	open -a /Applications/Byword.app "$1"
 }
 
-# Modify $PATH
-export PATH=/usr/local/bin:$PATH
-export PATH=$PATH:./node_modules/.bin # Put local node_modules in $PATH, just like in an npm script.
-export PATH=$PATH:/usr/local/sbin
-export PATH=$PATH:~/.bin
 
-export GIT_EDITOR="vim"
-export CASTBRIDGE_ANALYTICS=false
+####################################################################################################
+# Aliases
+####################################################################################################
 
-test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+# Misc
+alias ll="ls -lah"
+alias pi="ping 8.8.8.8"
 
+# Background Processes
+# Apparently, fg is too much to type
+alias z='fg %1'
+alias zz='fg %2'
+alias zzz='fg %3'
+alias zzzz='fg %4'
+alias zzzzz='fg %5'
+
+# Git
+alias git='hub' # https://hub.github.com/
+alias a="git add"
+alias d="git diff" # Note: this is aliased to `dirs` by default
+alias s="git status"
+alias c="git commit -m"
+alias cz="git cz"
+alias cm="git commit"
+alias co="git checkout"
+alias dc="git diff --cached"
+
+
+####################################################################################################
+# $PATH
+####################################################################################################
+export PATH="$PATH:~/n/bin" # This comes first to override homebrew node (installed with yarn)
+export PATH="$PATH:~/.bin"
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:/usr/local/sbin"
+export PATH="$PATH:./node_modules/.bin" # Use local node modules like an npm script
 export PATH="$PATH:`yarn global bin`"
 export PATH="$PATH:/Library/TeX/texbin"
-export PATH="$PATH:/Users/ariporad/Library/Android/sdk/platform-tools" # I hate Android Studio
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin" # I'm undecided on Postgres.app
+export PATH="$PATH:/Users/ariporad/Library/Android/sdk/platform-tools" # I hate Android
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin" # Postgres.app
 
-eval "$(direnv hook zsh)"
 
+####################################################################################################
+# Load all the things
+####################################################################################################
 powerline-daemon -q
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
+eval $(thefuck --alias)
+eval "$(direnv hook zsh)"
 eval "$(ssh-agent)" > /dev/null
-
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/dev/schoolkit/index.sh ] && source ~/dev/schoolkit/index.sh
-
-function beep_loop() {
-	while true; do
-		sleep $1
-		beep
-	done
-}
+[ -f /Users/ariporad/.travis/travis.sh ] && source /Users/ariporad/.travis/travis.sh
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
 # Local Config
 # https://unix.stackexchange.com/a/190864
 [ -f .profile ] && source .profile
-
-eval $(thefuck --alias)
-
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH="$N_PREFIX/bin:$PATH"  # Added by n-install (see http://git.io/n-install-repo).
-
-# Put the directory in the title bar so Timing can see it
-precmd() {
-	echo -ne "\033]0;${PWD/#$HOME/~}\007"
-}
-
-# added by travis gem
-[ -f /Users/ariporad/.travis/travis.sh ] && source /Users/ariporad/.travis/travis.sh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
