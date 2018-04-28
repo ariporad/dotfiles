@@ -56,6 +56,7 @@ ENABLE_CORRECTION="true"
 export PORT=8080 # A sane default
 export NODE_ENV=development
 export EDITOR='vim'
+export FZF_DEFAULT_COMMAND='ag --ignore node_modules -g "" --nocolor'
 
 # Fix Encoding
 export LC_ALL=en_US.UTF-8
