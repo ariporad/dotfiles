@@ -15,6 +15,8 @@ endif
 
 let g:colors_name = 'ariporad'
 
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14 
+
 hi Boolean        guifg=#afaf87 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=144     ctermbg=NONE    cterm=NONE
 hi Character      guifg=#afaf87 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=144     ctermbg=NONE    cterm=NONE
 hi ColorColumn    guifg=#d7d7af guibg=#1c1c1c guisp=NONE    gui=NONE      ctermfg=187     ctermbg=234     cterm=NONE
