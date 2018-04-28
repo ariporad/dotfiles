@@ -1,5 +1,6 @@
 {
     "casks": [
+        "1password",
         "airfoil",
         "alfred",
         "atom",
@@ -10,12 +11,16 @@
         "istat-menus",
         "karabiner-elements",
         "mactracker",
+        "macvim",
         "omnifocus",
         "selfcontrol",
         "sizeup",
         "soulver",
-        "vlc",
-        "1password"
+        "spotmenu",
+        "vagrant",
+        "vagrant-manager",
+        "virtualbox",
+        "vlc"
     ],
     "formulas": [
         "direnv",
@@ -23,12 +28,26 @@
         "git",
         "gnupg",
         "gpg-agent",
+        "heroku",
+        "heroku-node",
         "hub",
+        "jq",
         "macvim --with-cscope --with-lua --with-override-system-vim --with-luajit --with-python",
         "mobile-shell",
+        "mosh",
         "node",
+        "pandoc",
+        "pandoc-citeproc",
+        "pcre",
+        "perl",
+        "pinentry-mac",
+        "protobuf",
         "python3",
+        "ruby",
+        "swiftlint",
+        "the_silver_searcher",
         "thefuck",
+        "vim",
         "wget",
         "yarn"
     ],
@@ -39,7 +58,9 @@
         "vim/.*": "~"
     },
     "taps": [
+        "caskformula/caskformula",
         "caskroom/cask",
+        "heroku/brew",
         "homebrew/core"
     ]
 }
