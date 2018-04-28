@@ -13,7 +13,7 @@ if version > 580
     endif
 endif
 
-let g:colors_name = 'moody'
+let g:colors_name = 'ariporad'
 
 hi Boolean        guifg=#afaf87 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=144     ctermbg=NONE    cterm=NONE
 hi Character      guifg=#afaf87 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=144     ctermbg=NONE    cterm=NONE
@@ -48,13 +48,13 @@ hi IncSearch      guifg=#1c1c1c guibg=#ffffaf guisp=#ffffaf gui=NONE      ctermf
 hi Include        guifg=#87af87 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=108     ctermbg=NONE    cterm=NONE
 hi Keyword        guifg=#87afd7 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=110     ctermbg=NONE    cterm=NONE
 hi Label          guifg=#87afd7 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=110     ctermbg=NONE    cterm=NONE
-hi LineNr         guifg=#444444 guibg=#121212 guisp=NONE    gui=NONE      ctermfg=241     ctermbg=NONE    cterm=NONE
+hi LineNr         guifg=#444444 guibg=NONE guisp=NONE    gui=NONE      ctermfg=241     ctermbg=NONE    cterm=NONE
 hi Macro          guifg=#87af87 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=108     ctermbg=NONE    cterm=NONE
 hi MatchParen     guifg=#afd787 guibg=#1c1c1c guisp=#1c1c1c gui=bold      ctermfg=150     ctermbg=234     cterm=bold
 hi ModeMsg        guifg=#d78700 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=172     ctermbg=NONE    cterm=NONE
 hi MoreMsg        guifg=#87d7d7 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=116     ctermbg=NONE    cterm=NONE
 hi NonText        guifg=#444444 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=238     ctermbg=NONE    cterm=NONE
-hi Normal         guifg=#c6c6c6 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=251     ctermbg=NONE    cterm=NONE
+hi Normal         guifg=#c6c6c6 guibg=#2d2d32 guisp=NONE    gui=NONE      ctermfg=251     ctermbg=NONE    cterm=NONE
 hi Number         guifg=#afaf87 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=144     ctermbg=NONE    cterm=NONE
 hi Operator       guifg=#87afd7 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=110     ctermbg=NONE    cterm=NONE
 hi Pmenu          guifg=#afaf5f guibg=#3a3a3a guisp=NONE    gui=NONE      ctermfg=143     ctermbg=237     cterm=NONE
