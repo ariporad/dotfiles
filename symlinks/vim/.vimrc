@@ -4,6 +4,7 @@
 set nocompatible
 let mapleader=","
 let maplocalleader="\\"
+set spelllang=en_us spellfile=$HOME/.vim/spell/en-utf-8.add
 
 colorscheme ariporad
 
@@ -239,11 +240,13 @@ function! s:goyo_enter()
 	set number relativenumber " Goyo does weird stuff with line numbers. Fix it.
 	set wrap linebreak nolist " soft wrapping
 	set scrolloff=999         " typewriter mode
+	set spell                 " spell check
 endfunction
 
 function! s:goyo_leave()
 	set nowrap nolinebreak    " no soft wrapping
 	set scrolloff=0           " no typewritter mode
+	set nospell               " no spell check
 endfunction
 
 augroup goyo_custom
