@@ -203,6 +203,13 @@ function! RemoveFancyCharacters()
 endfunction
 command! RemoveFancyCharacters :call RemoveFancyCharacters()
 
+" Occasionally, I'll want to open a markdown file in Byword.app
+function! OpenInByword()
+	" https://vi.stackexchange.com/a/1958
+	silent exec "!open -a /Applications/Byword.app \"%\"" | redraw!
+endfunction
+command! Byword :call OpenInByword()
+
 " Make the tab key indent at the start of a line, then autocomplete
 " Stolen from https://github.com/garybernhardt/dotfiles/blob/master/.vimrc#L167
 function! InsertTabWrapper()
