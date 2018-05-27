@@ -99,16 +99,29 @@ alias cm="git commit"
 alias co="git checkout"
 alias dc="git diff --cached"
 
+function g() {
+	cd "$@"
+	ll
+	printf "\n--------------------------------------------------------------------------------\n\n"
+	[ -d '.git' ] && git status
+	# direnv logs a bunch if .envrc exists, so we make another divider
+	[ -f '.envrc' ] && printf "\n--------------------------------------------------------------------------------\n\n"
+}
+
+function ev() {
+	vim ~/.zshrc
+	. ~/.zshrc
+}
 
 ####################################################################################################
 # $PATH
 ####################################################################################################
-export PATH="$PATH:~/n/bin" # This comes first to override homebrew node (installed with yarn)
-export PATH="$PATH:~/.bin"
+export PATH="/usr/local/bin:$PATH"
+export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:./node_modules/.bin" # Use local node modules like an npm script
-export PATH="$PATH:`yarn global bin`"
+# We add `yarn global bin` later once we setup nvm
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:/Users/ariporad/Library/Android/sdk/platform-tools" # I hate Android
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin" # Postgres.app
@@ -127,6 +140,11 @@ eval "$(ssh-agent)" > /dev/null
 [ -f ~/dev/schoolkit/index.sh ] && source ~/dev/schoolkit/index.sh
 [ -f /Users/ariporad/.travis/travis.sh ] && source /Users/ariporad/.travis/travis.sh
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$PATH:`yarn global bin`"
 
 # Local Config
 # https://unix.stackexchange.com/a/190864
