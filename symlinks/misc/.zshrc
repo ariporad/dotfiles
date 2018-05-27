@@ -31,6 +31,7 @@ alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias vi="vim" # MWAAAAAA HAAAAA HAAAAA HAAAAA HAAAAAA
 export EDITOR='vim'
 export GIT_EDITOR="vim"
+export SCHOOLKIT_EDITOR="mvim"
 export CASTBRIDGE_ANALYTICS=false
 
 # Fix Encoding Problems
