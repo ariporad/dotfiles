@@ -27,6 +27,7 @@ export PORT=8080 # A sane default
 export NODE_ENV=development
 
 # Editors
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias vi="vim" # MWAAAAAA HAAAAA HAAAAA HAAAAA HAAAAAA
 export EDITOR='vim'
 export GIT_EDITOR="vim"
