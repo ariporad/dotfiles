@@ -281,6 +281,9 @@ function! s:goyo_enter()
 	set wrap linebreak nolist " soft wrapping
 	set scrolloff=999         " typewriter mode
 	set spell                 " spell check
+
+	" fix common mispellings
+	inoremap <buffer> teh the
 endfunction
 
 function! s:goyo_leave()
