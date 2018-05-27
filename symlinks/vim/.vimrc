@@ -48,6 +48,34 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" netrw
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'tpope/vim-vinegar'
+
+let g:netrw_banner = 0
+let g:netrw_browse_split = 4
+let g:netrw_winsize = 20
+
+noremap <C-\> :Lexplore<CR>
+
+" https://unix.stackexchange.com/a/42939
+augroup netrw_dvorak_fix
+    autocmd!
+    autocmd filetype netrw call Fix_netrw_maps_for_dvorak()
+augroup END
+function! Fix_netrw_maps_for_dvorak()
+	noremap <buffer> h h
+	noremap <buffer> H H
+	noremap <buffer> t j
+	noremap <buffer> T J
+	noremap <buffer> n k
+	noremap <buffer> N K
+	noremap <buffer> s l
+	noremap <buffer> S L
+	setlocal winwidth=20 winminwidth=20
+endfunction
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " .vimrc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " make it easy to edit the .vimrc
