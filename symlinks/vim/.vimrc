@@ -6,6 +6,9 @@ let mapleader=","
 let maplocalleader="\\"
 set spelllang=en_us spellfile=$HOME/.vim/spell/en-utf-8.add
 
+" https://stackoverflow.com/a/30691754/1928484
+set clipboard^=unnamed,unnamedplus
+
 colorscheme ariporad
 
 " start Vundle
