@@ -41,6 +41,11 @@ noremap - g^
 noremap $ <nop>
 noremap ^ <nop>
 
+" don't use arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " .vimrc
