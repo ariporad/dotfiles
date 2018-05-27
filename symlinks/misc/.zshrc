@@ -4,6 +4,7 @@
 export ZSH=/Users/ariporad/.oh-my-zsh # Path to Oh-My-Zsh
 DISABLE_AUTO_TITLE="true"
 ENABLE_CORRECTION="true"
+ZSH_THEME="spaceship"
 source $ZSH/oh-my-zsh.sh
 #
 # Use Vi mode
@@ -15,8 +16,6 @@ bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
-# TODO: Dvorak Remap
-
 
 ####################################################################################################
 # Misc. ENV
@@ -132,8 +131,6 @@ export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin" # Po
 ####################################################################################################
 # Load all the things
 ####################################################################################################
-powerline-daemon -q
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 eval $(thefuck --alias)
 eval "$(direnv hook zsh)"
@@ -148,6 +145,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="$PATH:`yarn global bin`"
 
+
+####################################################################################################
+# Prompt
+####################################################################################################
+export SPACESHIP_NODE_DEFAULT_VERSION="$("$(nvm which default)" -v)"
+export SPACESHIP_VI_MODE_SHOW=false
+
+
+####################################################################################################
 # Local Config
+####################################################################################################
 # https://unix.stackexchange.com/a/190864
 [ -f .profile ] && source .profile
