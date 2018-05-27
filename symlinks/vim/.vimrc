@@ -79,7 +79,7 @@ endfunction
 " .vimrc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " make it easy to edit the .vimrc
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :vsplit ~/.vimrc<cr>
 
 " automagically reload the .vimrc after editing	
 autocmd! bufwritepost .vimrc source %
