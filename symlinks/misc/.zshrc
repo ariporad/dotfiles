@@ -32,10 +32,12 @@ bindkey '^r' history-incremental-search-backward
 ####################################################################################################
 
 # Editors
+# Setup vvim (normal vim), mvim (MacVim), gvim (generic GUI), nvim (Neovim), and rvim (Neovim GUI)
 alias vi="vim" # MWAAAAAA HAAAAA HAAAAA HAAAAA HAAAAAA
-alias vim="nvim" # MWAAAAAA HAAAAA HAAAAA HAAAAA HAAAAAA
-alias vvim="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias vvim="vim"
 alias rvim="vimr" # For consistency
+alias gvim="mvim"
 
 # Misc
 alias ll="ls -lah"
@@ -72,7 +74,7 @@ export NODE_ENV=development
 # Editors
 export EDITOR='vim'
 export GIT_EDITOR="vim"
-export SCHOOLKIT_EDITOR="mvim"
+export SCHOOLKIT_EDITOR="gvim"
 
 # Fix Encoding Problems
 export LC_ALL=en_US.UTF-8
