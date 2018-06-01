@@ -15,12 +15,14 @@ endif
 
 let g:colors_name = 'ariporad'
 
-set guifont=Source\ Code\ Pro\ for\ Powerline:h14 
+if !has("gui_vimr")
+	set guifont=Source\ Code\ Pro\ for\ Powerline:h14 
+endif
 
 hi Boolean        guifg=#afaf87 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=144     ctermbg=NONE    cterm=NONE
 hi Character      guifg=#afaf87 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=144     ctermbg=NONE    cterm=NONE
 hi ColorColumn    guifg=#d7d7af guibg=#1c1c1c guisp=NONE    gui=NONE      ctermfg=187     ctermbg=234     cterm=NONE
-hi Comment        guifg=#4e4e4e guibg=NONE    guisp=NONE    gui=NONE      ctermfg=239     ctermbg=NONE    cterm=NONE
+hi Comment        guifg=#777777 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=244     ctermbg=NONE    cterm=NONE
 hi Conceal        guifg=#d78700 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=172     ctermbg=NONE    cterm=NONE
 hi Conditional    guifg=#87afd7 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=110     ctermbg=NONE    cterm=NONE
 hi Constant       guifg=#afaf87 guibg=NONE    guisp=NONE    gui=NONE      ctermfg=144     ctermbg=NONE    cterm=NONE
