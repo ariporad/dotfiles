@@ -25,6 +25,7 @@
         "wkhtmltopdf"
     ],
     "formulas": [
+        "antigen",
         "atk",
         "atkmm",
         "augeas",

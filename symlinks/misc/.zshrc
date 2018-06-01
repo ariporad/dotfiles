@@ -1,12 +1,21 @@
 ####################################################################################################
-# Oh-My-Zsh
+# Antigen
 ####################################################################################################
-export ZSH=/Users/ariporad/.oh-my-zsh # Path to Oh-My-Zsh
+source /usr/local/share/antigen/antigen.zsh
+
+antigen use oh-my-zsh
+
+
+####################################################################################################
+# ZSH
+####################################################################################################
 DISABLE_AUTO_TITLE="true"
 ENABLE_CORRECTION="true"
-ZSH_THEME="spaceship"
-source $ZSH/oh-my-zsh.sh
-#
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+
 # Use Vi mode
 export KEYTIMEOUT=1
 bindkey -v
@@ -17,23 +26,53 @@ bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 
+
 ####################################################################################################
-# Misc. ENV
+# Misc. Aliases
+####################################################################################################
+
+# Editors
+alias vi="vim" # MWAAAAAA HAAAAA HAAAAA HAAAAA HAAAAAA
+alias vim="nvim" # MWAAAAAA HAAAAA HAAAAA HAAAAA HAAAAAA
+alias vvim="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias rvim="vimr" # For consistency
+
+# Misc
+alias ll="ls -lah"
+alias pi="ping 8.8.8.8"
+
+# Background Processes
+# Apparently, fg is too much to type
+alias z='fg %1'
+alias zz='fg %2'
+alias zzz='fg %3'
+alias zzzz='fg %4'
+alias zzzzz='fg %5'
+
+# Git
+alias git='hub' # https://hub.github.com/
+alias a="git add"
+alias d="git diff" # Note: this is aliased to `dirs` by default
+alias s="git status"
+alias c="git commit -m"
+alias cz="git cz"
+alias cm="git commit"
+alias co="git checkout"
+alias dc="git diff --cached"
+
+
+####################################################################################################
+# Misc. ENV Vars
 ####################################################################################################
 
 # Sane Defaults
-export PORT=8080 # A sane default
+export PORT=8080
 export NODE_ENV=development
 
 # Editors
-alias vvim="/Applications/MacVim.app/Contents/MacOS/Vim"
-alias rvim="vimr" # For consistency
-alias vim="nvim" # MWAAAAAA HAAAAA HAAAAA HAAAAA HAAAAAA
-alias vi="vim" # MWAAAAAA HAAAAA HAAAAA HAAAAA HAAAAAA
 export EDITOR='vim'
 export GIT_EDITOR="vim"
 export SCHOOLKIT_EDITOR="mvim"
-export CASTBRIDGE_ANALYTICS=false
 
 # Fix Encoding Problems
 export LC_ALL=en_US.UTF-8
@@ -43,6 +82,9 @@ export LANG=en_US.UTF-8
 export LESS="-FXRS"
 export PGDATA="/usr/local/var/postgres"
 export FZF_DEFAULT_COMMAND='ag --ignore node_modules -g "" --nocolor'
+
+# Other
+export CASTBRIDGE_ANALYTICS=false
 
 
 ####################################################################################################
@@ -74,34 +116,6 @@ function byword() {
 	open -a /Applications/Byword.app "$1"
 }
 
-
-####################################################################################################
-# Aliases
-####################################################################################################
-
-# Misc
-alias ll="ls -lah"
-alias pi="ping 8.8.8.8"
-
-# Background Processes
-# Apparently, fg is too much to type
-alias z='fg %1'
-alias zz='fg %2'
-alias zzz='fg %3'
-alias zzzz='fg %4'
-alias zzzzz='fg %5'
-
-# Git
-alias git='hub' # https://hub.github.com/
-alias a="git add"
-alias d="git diff" # Note: this is aliased to `dirs` by default
-alias s="git status"
-alias c="git commit -m"
-alias cz="git cz"
-alias cm="git commit"
-alias co="git checkout"
-alias dc="git diff --cached"
-
 function g() {
 	cd "$@"
 	ll
@@ -116,19 +130,20 @@ function ev() {
 	. ~/.zshrc
 }
 
+
 ####################################################################################################
 # $PATH
 ####################################################################################################
+
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:./node_modules/.bin" # Use local node modules like an npm script
-# We add `yarn global bin` later once we setup nvm
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:/Users/ariporad/Library/Android/sdk/platform-tools" # I hate Android
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin" # Postgres.app
-
+# We add `yarn global bin` later once we setup nvm
 
 ####################################################################################################
 # Load all the things
@@ -151,6 +166,8 @@ export PATH="$PATH:`yarn global bin`"
 ####################################################################################################
 # Prompt
 ####################################################################################################
+
+antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 export SPACESHIP_NODE_DEFAULT_VERSION="$("$(nvm which default)" -v)"
 export SPACESHIP_VI_MODE_SHOW=false
 
@@ -158,5 +175,10 @@ export SPACESHIP_VI_MODE_SHOW=false
 ####################################################################################################
 # Local Config
 ####################################################################################################
+
 # https://unix.stackexchange.com/a/190864
 [ -f .profile ] && source .profile
+
+
+# This must come last
+antigen apply
