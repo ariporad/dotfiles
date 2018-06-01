@@ -28,42 +28,6 @@ bindkey '^r' history-incremental-search-backward
 
 
 ####################################################################################################
-# Misc. Aliases
-####################################################################################################
-
-# Editors
-# Setup vvim (normal vim), mvim (MacVim), gvim (generic GUI), nvim (Neovim), and rvim (Neovim GUI)
-alias vi="vim" # MWAAAAAA HAAAAA HAAAAA HAAAAA HAAAAAA
-alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-alias vvim="vim"
-alias rvim="vimr" # For consistency
-alias gvim="mvim"
-
-# Misc
-alias ll="ls -lah"
-alias pi="ping 8.8.8.8"
-
-# Background Processes
-# Apparently, fg is too much to type
-alias z='fg %1'
-alias zz='fg %2'
-alias zzz='fg %3'
-alias zzzz='fg %4'
-alias zzzzz='fg %5'
-
-# Git
-alias git='hub' # https://hub.github.com/
-alias a="git add"
-alias d="git diff" # Note: this is aliased to `dirs` by default
-alias s="git status"
-alias c="git commit -m"
-alias cz="git cz"
-alias cm="git commit"
-alias co="git checkout"
-alias dc="git diff --cached"
-
-
-####################################################################################################
 # Misc. ENV Vars
 ####################################################################################################
 
@@ -132,6 +96,19 @@ function ev() {
 	. ~/.zshrc
 }
 
+# https://stackoverflow.com/a/3232082/1928484
+function confirm() {
+    # call with a prompt string or use a default
+    read -r -p "${1:-Are you sure? [y/N]} " response
+    case "$response" in
+        [yY][eE][sS]|[yY]) 
+            true
+            ;;
+        *)
+            false
+            ;;
+    esac
+}
 
 ####################################################################################################
 # $PATH
@@ -182,5 +159,41 @@ export SPACESHIP_VI_MODE_SHOW=false
 [ -f .profile ] && source .profile
 
 
-# This must come last
+# Actually setup the plugins
 antigen apply
+
+
+####################################################################################################
+# Misc. Aliases
+####################################################################################################
+
+# Editors
+# Setup vvim (normal vim), mvim (MacVim), gvim (generic GUI), nvim (Neovim), and rvim (Neovim GUI)
+alias vi="vim" # MWAAAAAA HAAAAA HAAAAA HAAAAA HAAAAAA
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias vvim="vim"
+alias rvim="vimr" # For consistency
+alias gvim="mvim"
+
+# Misc
+alias ll="ls -lah"
+alias pi="ping 8.8.8.8"
+
+# Background Processes
+# Apparently, fg is too much to type
+alias z='fg %1'
+alias zz='fg %2'
+alias zzz='fg %3'
+alias zzzz='fg %4'
+alias zzzzz='fg %5'
+
+# Git
+alias git='hub' # https://hub.github.com/
+alias a="git add"
+alias d="git diff" # Note: this is aliased to `dirs` by default
+alias s="git status"
+alias c="git commit -m"
+alias cz="git cz"
+alias cm="git commit"
+alias co="git checkout"
+alias dc="git diff --cached"
