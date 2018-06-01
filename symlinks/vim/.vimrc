@@ -142,7 +142,7 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Window Managment
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set winheight=30                " this gets overridden later
+set winheight=9                 " this gets overridden later
 set winminheight=8              " make every window at least eight lines tall
 set winwidth=100                " try to make the active window at least 100 lines tall
 set winminwidth=30              " make every window at least 30 lines wide
