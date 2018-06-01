@@ -4,6 +4,7 @@
 source /usr/local/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh
+antigen bundle lukechilds/zsh-nvm
 
 
 ####################################################################################################
@@ -48,6 +49,7 @@ export LANG=en_US.UTF-8
 export LESS="-FXRS"
 export PGDATA="/usr/local/var/postgres"
 export FZF_DEFAULT_COMMAND='ag --ignore node_modules -g "" --nocolor'
+export NVM_AUTO_USE=true
 
 # Other
 export CASTBRIDGE_ANALYTICS=false
@@ -136,10 +138,6 @@ eval "$(ssh-agent)" > /dev/null
 [ -f /Users/ariporad/.travis/travis.sh ] && source /Users/ariporad/.travis/travis.sh
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="$PATH:`yarn global bin`"
 
 
 ####################################################################################################
@@ -147,7 +145,7 @@ export PATH="$PATH:`yarn global bin`"
 ####################################################################################################
 
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
-export SPACESHIP_NODE_DEFAULT_VERSION="$("$(nvm which default)" -v)"
+# $SPACESHIP_NODE_DEFAULT_VERSION gets set later, after we run antigen apply
 export SPACESHIP_VI_MODE_SHOW=false
 
 
@@ -159,8 +157,17 @@ export SPACESHIP_VI_MODE_SHOW=false
 [ -f .profile ] && source .profile
 
 
-# Actually setup the plugins
-antigen apply
+####################################################################################################
+# Antigen (again)
+####################################################################################################
+
+antigen apply # actually setup the plugins
+
+# Now add yarn global modules to $PATH. We can't do this until after antigen apply, because antigen
+# sets up nvm, which sets up yarn.
+export PATH="$PATH:`yarn global bin`"
+# Also set the default node version. See above for why.
+export SPACESHIP_NODE_DEFAULT_VERSION="$("$(nvm which default)" -v)"
 
 
 ####################################################################################################
