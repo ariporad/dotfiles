@@ -27,6 +27,7 @@ export NODE_ENV=development
 
 # Editors
 alias vvim="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias rvim="vimr" # For consistency
 alias vim="nvim" # MWAAAAAA HAAAAA HAAAAA HAAAAA HAAAAAA
 alias vi="vim" # MWAAAAAA HAAAAA HAAAAA HAAAAA HAAAAAA
 export EDITOR='vim'
