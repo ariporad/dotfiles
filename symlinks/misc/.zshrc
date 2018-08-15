@@ -172,8 +172,15 @@ antigen apply # actually setup the plugins
 # Now add yarn global modules to $PATH. We can't do this until after antigen apply, because antigen
 # sets up nvm, which sets up yarn.
 export PATH="$PATH:`yarn global bin`"
+
 # Also set the default node version. See above for why.
-export SPACESHIP_NODE_DEFAULT_VERSION="$("$(nvm which default)" -v)"
+# Sometimes (I think it's related to antigen updating), NVM disappears, which casues the .zshrc
+# to crash, which is very bad. To avoid this, we check if nvm exists before using it.
+if which nvm > /dev/null; then
+	export SPACESHIP_NODE_DEFAULT_VERSION="$("$(nvm which default)" -v)"
+else
+	echo "WARNING: Couldn't find nvm to set a default node version. This usually resolves itself if you restart your terminal."
+fi
 
 
 ####################################################################################################
