@@ -259,3 +259,17 @@ alias cm="git commit"
 alias co="git checkout"
 alias dc="git diff --cached"
 
+# A helper for Computational Thinking class, Winter Tri 2018-2019
+function ct() {
+	if [[ -n "$1" ]]; then
+		cd "$HOME/dev/school/ct/project$1"
+	fi
+
+	shift
+
+	source ~/.anaconda3/bin/activate
+
+	jupyter notebook
+
+	source ~/.anaconda3/bin/deactivate
+}
