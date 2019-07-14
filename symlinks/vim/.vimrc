@@ -1,9 +1,11 @@
 " My basic .vimrc only contains mappings. It's what I'll feed into IdeaVim or VsVim.
 source $HOME/.vimrc.basic
-colorscheme ariporad
 
 " start Vundle
 call plug#begin('~/.vim/plugged')
+
+set background=dark
+Plug 'altercation/vim-colors-solarized'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " netrw
@@ -257,3 +259,4 @@ augroup yaml
 augroup END
 
 call plug#end()
+colorscheme solarized
