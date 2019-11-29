@@ -194,32 +194,6 @@
                     "ignore": false,
                     "manipulate_caps_lock_led": false,
                     "simple_modifications": []
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": false,
-                        "is_pointing_device": true,
-                        "product_id": 16642,
-                        "vendor_id": 1578
-                    },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": false,
-                    "simple_modifications": []
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": false,
-                        "is_pointing_device": true,
-                        "product_id": 828,
-                        "vendor_id": 1386
-                    },
-                    "ignore": true,
-                    "manipulate_caps_lock_led": false,
-                    "simple_modifications": []
                 }
             ],
             "fn_function_keys": [
@@ -321,19 +295,8 @@
                 }
             ],
             "name": "Default profile",
-            "parameters": {
-                "delay_milliseconds_before_open_device": 1000
-            },
             "selected": true,
             "simple_modifications": [
-                {
-                    "from": {
-                        "key_code": "insert"
-                    },
-                    "to": {
-                        "key_code": "vk_none"
-                    }
-                },
                 {
                     "from": {
                         "key_code": "keypad_num_lock"
@@ -355,7 +318,7 @@
                         "pointing_button": "button4"
                     },
                     "to": {
-                        "consumer_key_code": "fastforward"
+                        "key_code": "f14"
                     }
                 },
                 {
@@ -363,7 +326,15 @@
                         "pointing_button": "button5"
                     },
                     "to": {
-                        "consumer_key_code": "play_or_pause"
+                        "key_code": "f13"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "insert"
+                    },
+                    "to": {
+                        "key_code": "vk_none"
                     }
                 }
             ],
@@ -371,7 +342,6 @@
                 "caps_lock_delay_milliseconds": 0,
                 "country_code": 0,
                 "keyboard_type": "ansi",
-                "mouse_key_xy_scale": 100,
                 "standalone_keys_delay_milliseconds": 200
             }
         }
