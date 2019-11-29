@@ -1,7 +1,7 @@
 {
-	"after_scripts": [
-		"./scripts/setup_vim.sh"
-	],
+    "after_scripts": [
+        "./scripts/setup_vim.sh"
+    ],
     "casks": [
         "1password",
         "airfoil",
@@ -127,6 +127,7 @@
     "symlinks": {
         "config/*": "~/.config/",
         "misc/.*": "~",
+        "ssh/*": "~/.ssh/",
         "vim/*": "~/.vim/",
         "vim/.*": "~"
     },
