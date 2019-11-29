@@ -8,3 +8,5 @@
 	excludesfile = ~/.gitignore_global
 [rerere]
 	enabled = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
