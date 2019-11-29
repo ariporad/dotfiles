@@ -28,7 +28,6 @@
         "ffmpeg",
         "git",
         "gnupg",
-        "gpg-agent",
         "hub",
         "imagemagick",
         "macvim --with-lua --with-override-system-vim --with-luajit --with-python",
