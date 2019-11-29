@@ -30,7 +30,7 @@
         "gnupg",
         "hub",
         "imagemagick",
-        "macvim --with-lua --with-override-system-vim --with-luajit --with-python",
+        "macvim --with-override-system-vim",
         "mosh",
         "neovim",
         "pandoc",
