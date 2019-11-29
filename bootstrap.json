@@ -31,7 +31,7 @@
         "gpg-agent",
         "hub",
         "imagemagick",
-        "macvim --with-cscope --with-lua --with-override-system-vim --with-luajit --with-python",
+        "macvim --with-lua --with-override-system-vim --with-luajit --with-python",
         "mosh",
         "neovim",
         "pandoc",
