@@ -259,4 +259,4 @@ augroup yaml
 augroup END
 
 call plug#end()
-colorscheme solarized
+colorscheme ariporad
