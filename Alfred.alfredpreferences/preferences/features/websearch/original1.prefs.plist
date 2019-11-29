@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>03719559-AE84-4C16-AF82-B97338D88EF6</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>gmail</string>
+			<key>plusSpaces</key>
+			<false/>
+			<key>text</key>
+			<string>Search Inbox for {query}</string>
+			<key>url</key>
+			<string>https://inbox.google.com/u/0/search/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>113A8322-FECC-41C3-AF23-E7C556EFA9EE</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>inbox</string>
+			<key>plusSpaces</key>
+			<false/>
+			<key>text</key>
+			<string>Search Inbox for {query}</string>
+			<key>url</key>
+			<string>https://inbox.google.com/u/0/search/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>5B68E148-DC65-43F1-8471-FC23519A5C26</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>eslint</string>
+			<key>text</key>
+			<string>Search for ESLint Rule `{query}`.</string>
+			<key>url</key>
+			<string>http://eslint.org/docs/rules/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>75FF6E1D-D013-4A92-9C8A-317254BB8D19</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>evernote</string>
+			<key>plusSpaces</key>
+			<false/>
+			<key>text</key>
+			<string>Search Evernote for {query}</string>
+			<key>url</key>
+			<string>https://www.evernote.com/Home.action#ses=1&amp;sh=5&amp;sds=3&amp;x={query}&amp;xb=e007e743-8d9c-4690-bb92-cb8232e48d4c&amp;</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
