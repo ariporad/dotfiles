@@ -1,10 +1,11 @@
+#zmodload zsh/zprof
 ####################################################################################################
 # Antigen
 ####################################################################################################
-source /usr/local/share/antigen/antigen.zsh
+export -p > ~/.initial-env
+source ~/.antigen/bin/antigen.zsh
 
 antigen use oh-my-zsh
-antigen bundle lukechilds/zsh-nvm
 
 
 ####################################################################################################
@@ -123,17 +124,13 @@ function precmd() {
 ####################################################################################################
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:./node_modules/.bin" # Use local node modules like an npm script
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin" # Postgres.app
-export PATH="$PATH:$ANDROID_HOME/emulator"
-export PATH="$PATH:$ANDROID_HOME/tools"
-export PATH="$PATH:$ANDROID_HOME/tools/bin"
-export PATH="$PATH:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$HOME/.yarn/bin"
 # We add `yarn global bin` later once we setup nvm
 
 ####################################################################################################
@@ -220,7 +217,7 @@ export PATH="$PATH:`yarn global bin`"
 if which nvm > /dev/null; then
 	export SPACESHIP_NODE_DEFAULT_VERSION="$("$(nvm which default)" -v)"
 else
-	echo "WARNING: Couldn't find nvm to set a default node version. This usually resolves itself if you restart your terminal."
+	#echo "WARNING: Couldn't find nvm to set a default node version. This usually resolves itself if you restart your terminal."
 fi
 
 
@@ -273,3 +270,4 @@ function ct() {
 
 	source ~/.anaconda3/bin/deactivate
 }
+#zprof
