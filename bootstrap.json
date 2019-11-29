@@ -54,7 +54,7 @@
         "vim/.*": "~"
     },
     "taps": [
-        "caskroom/cask",
+        "homebrew/cask-cask",
         "homebrew/cask",
         "homebrew/core"
     ]
