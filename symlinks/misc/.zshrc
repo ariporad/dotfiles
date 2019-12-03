@@ -1,9 +1,8 @@
-#zmodload zsh/zprof
 ####################################################################################################
 # Antigen
 ####################################################################################################
 export -p > ~/.initial-env
-source ~/.antigen/bin/antigen.zsh
+source /usr/local/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
@@ -151,7 +150,8 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 # Prompt
 ####################################################################################################
 
-antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
+antigen theme denysdovhan/spaceship-prompt spaceship
+
 # $SPACESHIP_NODE_DEFAULT_VERSION gets set later, after we run antigen apply
 # These sections are commented out for performance. battery is really slow, while the rest simply
 # make it marginally faster.
@@ -270,4 +270,3 @@ function ct() {
 
 	source ~/.anaconda3/bin/deactivate
 }
-#zprof
