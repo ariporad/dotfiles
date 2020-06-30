@@ -15,44 +15,44 @@
                     "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
-                    {
-                        "description": "Disable Command-Shift-Option-Control-Period (.)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "period",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift",
-                                            "option",
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Disable Command-Shift-Option-Control-Comma (,)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "comma",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "shift",
-                                            "option",
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "type": "basic"
-                            }
-                        ]
-                    },
+ 					{
+      					"description": "Disable Command-Shift-Option-Control-Period (.)",
+      					"manipulators": [
+        					{
+          						"type": "basic",
+          						"from": {
+            						"key_code": "period",
+            						"modifiers": {
+              							"mandatory": [
+                							"command",
+                							"shift",
+                							"option",
+                							"control"
+              							]
+            						}
+          						}
+        					}
+      					]
+    				},
+    				{
+      					"description": "Disable Command-Shift-Option-Control-Comma (,)",
+      					"manipulators": [
+        					{
+          						"type": "basic",
+          						"from": {
+            						"key_code": "comma",
+            						"modifiers": {
+              							"mandatory": [
+                							"command",
+                							"shift",
+                							"option",
+                							"control"
+              							]
+            						}
+          						}
+        					}
+      					]
+    				},
                     {
                         "description": "Change left_control to control + command + option + shift.",
                         "manipulators": [
@@ -72,15 +72,6 @@
                                             "left_command",
                                             "left_control",
                                             "left_option"
-                                        ]
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "period",
-                                        "modifiers": [
-                                            "left_shift",
-                                            "left_alt"
                                         ]
                                     }
                                 ],
@@ -267,32 +258,6 @@
                     "ignore": true,
                     "manipulate_caps_lock_led": false,
                     "simple_modifications": []
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 832,
-                        "vendor_id": 1452
-                    },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": true,
-                    "simple_modifications": []
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 65535,
-                        "vendor_id": 1452
-                    },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": true,
-                    "simple_modifications": []
                 }
             ],
             "fn_function_keys": [
@@ -404,7 +369,7 @@
                         "key_code": "insert"
                     },
                     "to": {
-                        "key_code": "f20"
+                        "key_code": "vk_none"
                     }
                 },
                 {
