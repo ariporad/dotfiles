@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -23,6 +25,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>23FECE94-BD2A-4925-96B0-D153DCE85B41</key>
@@ -34,6 +38,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -42,6 +48,34 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>UUID to clipboard (no pasting)</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3EF5E796-1C08-491B-BFC2-8BAD03B87E30</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F59AA92A-9DDC-4440-8DF9-3B42D21FD673</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5722B7FA-BC7C-4CE1-AE3B-390761F262D6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3EF5E796-1C08-491B-BFC2-8BAD03B87E30</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>C54681E9-F282-400D-A43E-7819FD9EF3D9</key>
@@ -53,6 +87,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -61,6 +97,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -77,10 +115,16 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
-				<string>uuidgen</string>
+				<string>uuidgen | xargs printf | tr '[:upper:]' '[:lower:]'</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -89,7 +133,7 @@
 			<key>uid</key>
 			<string>C54681E9-F282-400D-A43E-7819FD9EF3D9</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -98,13 +142,15 @@
 				<true/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>transient</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
 			<string>F47FBF78-6199-408C-B318-05CCB13D659F</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -125,7 +171,7 @@
 			<key>uid</key>
 			<string>23FECE94-BD2A-4925-96B0-D153DCE85B41</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -134,11 +180,7 @@
 				<false/>
 				<key>onlyshowifquerypopulated</key>
 				<false/>
-				<key>output</key>
-				<integer>0</integer>
 				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
 				<false/>
 				<key>text</key>
 				<string>{query}</string>
@@ -150,7 +192,7 @@
 			<key>uid</key>
 			<string>B7FA9283-6686-4A49-BDB8-E4118B513949</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -159,21 +201,29 @@
 				<false/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>transient</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
 			<string>842D97E1-7350-4457-9A6D-C013F1968C20</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
-				<string>uuidgen</string>
+				<string>uuidgen | xargs printf | tr '[:upper:]' '[:lower:]'</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -182,7 +232,64 @@
 			<key>uid</key>
 			<string>09BED4E6-1382-4C80-AC36-5FDD3D3B6536</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>F59AA92A-9DDC-4440-8DF9-3B42D21FD673</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>uuidgen | xargs printf | tr '[:upper:]' '[:lower:]'</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3EF5E796-1C08-491B-BFC2-8BAD03B87E30</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>uuid</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>5722B7FA-BC7C-4CE1-AE3B-390761F262D6</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -191,33 +298,66 @@
 	<dict>
 		<key>09BED4E6-1382-4C80-AC36-5FDD3D3B6536</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>250</real>
 		</dict>
 		<key>23FECE94-BD2A-4925-96B0-D153DCE85B41</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
+		<key>3EF5E796-1C08-491B-BFC2-8BAD03B87E30</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<integer>415</integer>
+		</dict>
+		<key>5722B7FA-BC7C-4CE1-AE3B-390761F262D6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>415</integer>
+		</dict>
 		<key>842D97E1-7350-4457-9A6D-C013F1968C20</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>250</real>
 		</dict>
 		<key>B7FA9283-6686-4A49-BDB8-E4118B513949</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>130</real>
 		</dict>
 		<key>C54681E9-F282-400D-A43E-7819FD9EF3D9</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>F47FBF78-6199-408C-B318-05CCB13D659F</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>10</real>
+		</dict>
+		<key>F59AA92A-9DDC-4440-8DF9-3B42D21FD673</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<integer>415</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
