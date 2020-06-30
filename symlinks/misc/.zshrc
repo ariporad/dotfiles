@@ -1,7 +1,20 @@
+# Back up the initial environment before we start modifying things
+export -p > ~/.initial-env
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+
 ####################################################################################################
 # Antigen
 ####################################################################################################
-export -p > ~/.initial-env
+
+source ~/.powerlevel10k/powerlevel10k.zsh-theme
+
 source /usr/local/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh
@@ -145,54 +158,6 @@ eval "$(ssh-agent)" > /dev/null
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
 
-
-####################################################################################################
-# Prompt
-####################################################################################################
-
-antigen theme denysdovhan/spaceship-prompt spaceship
-
-# $SPACESHIP_NODE_DEFAULT_VERSION gets set later, after we run antigen apply
-# These sections are commented out for performance. battery is really slow, while the rest simply
-# make it marginally faster.
-export SPACESHIP_VI_MODE_SHOW=false
-SPACESHIP_PROMPT_ORDER=(
-  time          # Time stamps section
-  user          # Username section
-  dir           # Current directory section
-  host          # Hostname section
-  git           # Git section (git_branch + git_status)
-  #hg            # Mercurial section (hg_branch  + hg_status)
-  package       # Package version
-  node          # Node.js section
-  ruby          # Ruby section
-  #elixir        # Elixir section
-  xcode         # Xcode section
-  swift         # Swift section
-  #golang        # Go section
-  #php           # PHP section
-  #rust          # Rust section
-  #haskell       # Haskell Stack section
-  #julia         # Julia section
-  docker        # Docker section
-  aws           # Amazon Web Services section
-  venv          # virtualenv section
-  #conda         # conda virtualenv section
-  #pyenv         # Pyenv section
-  #dotnet        # .NET section
-  ember         # Ember.js section
-  kubecontext   # Kubectl context section
-  exec_time     # Execution time
-  line_sep      # Line break
-  # The battery widget is *very* slow (~20ms)
-  #battery       # Battery level and status
-  vi_mode       # Vi-mode indicator
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
-
-
 ####################################################################################################
 # Local Config
 ####################################################################################################
@@ -270,3 +235,6 @@ function ct() {
 
 	source ~/.anaconda3/bin/deactivate
 }
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
