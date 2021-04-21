@@ -3,6 +3,10 @@
 [Tt][Oo][Dd][Oo].[Tt][Xx][Tt]
 [Tt][Oo][Dd][Oo].[Mm][Dd]
 
+### Microsoft Word ###
+\~\$*.docx
+
+
 # Created by https://www.gitignore.io/api/jetbrains,osx,vim,sublimetext,gpg,dropbox,vagrant
 
 ### JetBrains ###
