@@ -1,1 +1,2 @@
-source $HOME/.vimrc.basic
+source ~/.vimrc.basic
+set ideajoin
