@@ -201,6 +201,64 @@ alias gvim="mvim"
 # Misc
 alias ll="ls -lah"
 alias pi="ping 8.8.8.8"
+alias lisp="sbcl"
+
+# MATLAB
+export MATLAB="/Applications/MATLAB_R2021a.app"
+export MATLAB_CLI="$MATLAB/bin/matlab"
+alias matlab="$MATLAB_CLI -nodesktop -nosplash"
+
+function qeasim() {
+	# The above alias wasn't working in this function
+	$MATLAB_CLI -nodesktop -nosplash -nojvm -r "qeasim $*"
+}
+
+# Fancy wrapper to run a qeasim simualtion, then cleanly shut it down
+function qearun() {
+	simname="$1"
+	
+	echo "Running QEA Simulation: $simname..."
+
+	# Create a temporary file to put the MATLAB script in
+	tmp_dir="$(mktemp -d)"
+	mkdir -p "$tmp_dir"
+	tmp_file="$tmp_dir/helper.m"
+
+	# Save the script
+	cat > "$tmp_file" <<EOF
+		try
+			qeasim start $simname;
+		catch err
+			if (strcmp(err.message, 'Unable to resolve the name com.mathworks.mlwidgets.html.ddux.DduxWebUiEventLogger.logUIEvent.'))
+				% this error is totally fine, it's because we're running without a GUI
+			else
+				rethrow(err);
+			end
+		end
+		while 1
+			cmd = input("Type 'quit' to shut down the simulator, or 'escape' to get a MATLAB prompt: ", "s");
+
+			if (strcmp(cmd, 'quit'))
+				disp("Shutting down the simulator and exiting MATLAB...");
+				qeasim stop;
+				exit;
+				break;
+			end
+			if (strcmp(cmd, 'escape'))
+				disp("Returning to MATLAB prompt...");
+				disp("You MUST run 'qeasim stop' before exiting MATLAB.");
+				break;
+			end
+			disp("Invaild Input!");
+		end
+EOF
+
+	# Now run it
+	$MATLAB_CLI -nodesktop -nosplash -nojvm -r "run('$tmp_file')"
+
+	# Then clean up
+	rm -r "$tmp_dir"
+}
 
 # Background Processes
 # Apparently, fg is too much to type
