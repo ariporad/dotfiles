@@ -1,8 +1,0 @@
-Host *
- AddKeysToAgent yes
- UseKeychain yes
- IdentityFile ~/.ssh/id_rsa
-
-Host aporad-robofish-1.local
- HostName aporad-robofish-1.local
- User pi

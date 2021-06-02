@@ -1,6 +1,12 @@
 symlinks/config/karabiner/automatic_backups
 # Created by https://www.gitignore.io/api/vim,git,node,macos
 
+# We actually want to include SSH config files here
+!.ssh
+
+# Karabiner creates tons of automatic backups that we want to ignore, because they're noisy
+symlinks/karabiner/.config/karabiner/automatic_backups
+
 ### Git ###
 *.orig
 

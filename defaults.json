@@ -1,9 +1,0 @@
-{
-	"com.apple.Finder": {
-		"AppleShowAllFiles": true
-	},
-	"com.googlecode.iTerm2": {
-		"PrefsCustomFolder": "~/.cider/iterm2_prefs",
-		"LoadPrefsFromCustomFolder": 1
-	}
-}
