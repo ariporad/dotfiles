@@ -136,6 +136,8 @@ function precmd() {
 ####################################################################################################
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+export PATH="$PATH:/Users/ariporad/Library/Python/3.8/bin"
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/local/sbin"
