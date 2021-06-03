@@ -1,0 +1,24 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Ari Porad
+	email = ari@ariporad.com
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore_global
+[rerere]
+	enabled = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[hub]
+	protocol = ssh
+[alias]
+	fixup = commit --amend --no-edit
+	unstage = restore --staged
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main

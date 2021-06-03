@@ -5,7 +5,7 @@ symlinks/config/karabiner/automatic_backups
 !.ssh
 
 # Karabiner creates tons of automatic backups that we want to ignore, because they're noisy
-symlinks/karabiner/.config/karabiner/automatic_backups
+workspaces/full/symlinks/karabiner/.config/karabiner/automatic_backups
 
 ### Git ###
 *.orig

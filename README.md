@@ -1,3 +1,3 @@
 # Dotfiles
 
-My Dotfiles. Gathered by [Cider](https://github.com/msanders/cider). Not guaranteed to work anywhere or for anyone.
+My Dotfiles. Gathered by [zero.sh](https://github.com/zero-sh/zero.sh). Not guaranteed to work anywhere or for anyone.

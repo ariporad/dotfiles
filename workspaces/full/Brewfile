@@ -1,0 +1,44 @@
+##
+# Initially generated via `brew bundle dump --describe`, but then cleaned up manually.
+#
+# Depends on workspaces/shared/Brewfile, which is automatically included by zero-sh
+##
+
+# Taps
+tap "homebrew/core"
+tap "homebrew/cask"
+tap "homebrew/bundle"
+tap "zero-sh/tap"
+
+###
+# Bonuses
+###
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Remote terminal application
+brew "mosh"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# Library and executable for using citeproc with pandoc
+brew "pandoc-citeproc"
+# Download YouTube videos from the command-line
+brew "youtube-dl"
+
+# Application launcher and productivity software
+cask "alfred"
+# Menu bar icon organizer
+cask "bartender"
+# Keyboard customizer
+cask "karabiner-elements"
+# Text editor
+cask "macvim"
+
+###
+# App Store Apps
+###
+mas "Amphetamine", id: 937984704
+mas "Moom", id: 419330170

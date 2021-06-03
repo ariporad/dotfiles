@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>autoExpandMidString</key>
+	<true/>
+	<key>autoExpandSnippetPlaySound</key>
+	<false/>
+	<key>autoExpandSnippetTriggerPlaySound</key>
+	<false/>
+	<key>autoExpandSnippetsExcludedApps</key>
+	<array>
+		<string>com.runningwithcrayons.Alfred-Preferences</string>
+	</array>
+	<key>autoExpandSnippetsIgnoreApps</key>
+	<array>
+		<string>com.runningwithcrayons.Alfred-3</string>
+		<string>com.runningwithcrayons.Alfred-Preferences-3</string>
+		<string>com.googlecode.iterm2</string>
+		<string>org.vim.MacVim</string>
+		<string>com.apple.Terminal</string>
+		<string>abnerworks.Typora</string>
+	</array>
+	<key>autoExpandSnippetsSound</key>
+	<false/>
+	<key>fastAppend</key>
+	<true/>
+	<key>fastAppendBackToClipboard</key>
+	<true/>
+	<key>fastAppendSeparator</key>
+	<integer>1</integer>
+	<key>hotkey</key>
+	<dict>
+		<key>key</key>
+		<integer>8</integer>
+		<key>mod</key>
+		<integer>1966080</integer>
+		<key>string</key>
+		<string>C</string>
+	</dict>
+	<key>persistFor</key>
+	<integer>1</integer>
+	<key>snippetKeyword</key>
+	<string>s</string>
+	<key>snippetKeywordEnabled</key>
+	<false/>
+	<key>viewerKeyword</key>
+	<string>clip</string>
+</dict>
+</plist>

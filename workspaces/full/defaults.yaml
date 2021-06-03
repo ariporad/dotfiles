@@ -1,0 +1,3 @@
+# Unclear if this does anything
+com.runningwithcrayons.Alfred-Preferences:
+    syncfolder: '${HOME}/.config/alfred'

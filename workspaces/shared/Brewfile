@@ -1,0 +1,79 @@
+##
+# Initially generated via `brew bundle dump --describe`, but then cleaned up manually.
+##
+
+# Taps
+tap "homebrew/core"
+tap "homebrew/cask"
+tap "homebrew/bundle"
+tap "zero-sh/tap"
+
+# Plugin manager for zsh, inspired by oh-my-zsh and vundle
+brew "antigen"
+# Radically simple personal bootstrapping tool for macOS
+brew "zero-sh/tap/zero"
+
+###
+# Basic Dependencies
+###
+
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
+# Automatic configure script builder
+brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# Cross-platform make
+brew "cmake"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# Distributed revision control system
+brew "git"
+
+###
+# Programming Environment
+###
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8", link: true
+# Load/unload environment variables based on $PWD
+brew "direnv"
+# Add GitHub support to git on the command-line
+brew "hub"
+# Ruby version manager (includes Ruby)
+brew "rbenv"
+# JavaScript package manager (includes Node)
+brew "yarn"
+
+###
+# Terminal Environment
+###
+# Code-search similar to ack
+brew "the_silver_searcher"
+# Programmatically correct mistyped console commands
+brew "thefuck"
+# Terminal multiplexer
+brew "tmux"
+# Vi 'workalike' with many additional features
+brew "vim"
+# Internet file retriever
+brew "wget"
+
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Web browser
+cask "google-chrome"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Music streaming service
+cask "spotify"
+# Spotify and iTunes in the menu bar
+cask "spotmenu"
+
+###
+# App Store Apps
+###
+mas "OneTab", id: 1540160809
+mas "PiPifier", id: 1160374471
+mas "Refined GitHub", id: 1519867270

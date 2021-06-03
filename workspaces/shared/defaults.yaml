@@ -1,0 +1,7 @@
+com.apple.Finder:
+    AppleShowAllFiles: true
+    NewWindowTargetPath: 'file://${HOME}/Desktop'
+
+com.googlecode.iTerm2:
+    PrefsCustomFolder: '${HOME}/.config/iterm2'
+    LoadPrefsFromCustomFolder: 1
