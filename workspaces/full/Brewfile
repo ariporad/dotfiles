@@ -19,8 +19,6 @@ brew "ffmpeg"
 brew "gnupg"
 # Remote terminal application
 brew "mosh"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Library and executable for using citeproc with pandoc
