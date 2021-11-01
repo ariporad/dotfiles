@@ -458,16 +458,6 @@
                 },
                 {
                     "from": {
-                        "key_code": "right_shift"
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_option"
-                        }
-                    ]
-                },
-                {
-                    "from": {
                         "pointing_button": "button4"
                     },
                     "to": [
