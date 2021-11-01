@@ -1,4 +1,5 @@
-symlinks/config/karabiner/automatic_backups
+*/karabiner/automatic_backups/karabiner*
+
 # Created by https://www.gitignore.io/api/vim,git,node,macos
 
 # We actually want to include SSH config files here
