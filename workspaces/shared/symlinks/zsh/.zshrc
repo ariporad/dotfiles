@@ -318,3 +318,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export PUSHOVER_TOKEN="an1cntj1zzupk8u9apeu98zi4vyisu"
+export PUSHOVER_USER="ui3nyymn4i2s6cqn147y3pvn56sp5q"
