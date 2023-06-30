@@ -15,6 +15,7 @@
 [alias]
 	fixup = commit --amend --no-edit
 	unstage = restore --staged
+	tree = ! git ls-tree --full-name --name-only -t -r HEAD | sed -e \"s/[^-][^\\/]*\\//   |/g\" -e \"s/|\\([^ ]\\)/|-- \\1/\"
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -22,3 +23,20 @@
 	required = true
 [init]
 	defaultBranch = main
+[pull]
+	rebase = false
+[rebase]
+	autoStash = true
+[diff "jupyternotebook"]
+	command = git-nbdiffdriver diff
+[merge "jupyternotebook"]
+	driver = git-nbmergedriver merge %O %A %B %L %P
+	name = jupyter notebook merge driver
+[difftool "nbdime"]
+	cmd = git-nbdifftool diff \"$LOCAL\" \"$REMOTE\" \"$BASE\"
+[difftool]
+	prompt = false
+[mergetool "nbdime"]
+	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[mergetool]
+	prompt = false
