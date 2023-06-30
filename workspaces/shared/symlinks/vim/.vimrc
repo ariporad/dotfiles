@@ -60,22 +60,22 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Linting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'w0rp/ale'
-let g:ale_fixers = {
-			\	'javascript': ['prettier', 'eslint'],
-			\}
-let g:ale_linters = {
-			\   'javascript': ['eslint'],
-			\}
-let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --use-tabs 
-			\--tab-width 4 --printWidth 100'
-let g:ale_sign_error = "◉"
-let g:ale_sign_warning = "◉"
-let g:ale_fix_on_save = 1
-hi link ALEErrorSign    Error
-hi link ALEWarningSign  Warning
-hi link ALEStyleError   ErrorMsg
-hi link ALEStyleWarning   WarningMsg
+"Plug 'w0rp/ale'
+"let g:ale_fixers = {
+"			\	'javascript': ['prettier', 'eslint'],
+"			\}
+"let g:ale_linters = {
+"			\   'javascript': ['eslint'],
+"			\}
+"let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --use-tabs 
+"			\--tab-width 4 --printWidth 100'
+"let g:ale_sign_error = "◉"
+"let g:ale_sign_warning = "◉"
+"let g:ale_fix_on_save = 1
+"hi link ALEErrorSign    Error
+"hi link ALEWarningSign  Warning
+"hi link ALEStyleError   ErrorMsg
+"hi link ALEStyleWarning   WarningMsg
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -211,6 +211,7 @@ augroup END
 
 " Misc
 Plug 'editorconfig/editorconfig-vim' " TODO
+Plug 'bogado/file-line' " Allows `vim file:line`
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
