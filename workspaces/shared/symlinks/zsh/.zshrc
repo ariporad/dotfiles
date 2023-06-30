@@ -1,34 +1,31 @@
 # Back up the initial environment before we start modifying things
 export -p > ~/.initial-env
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 
 ####################################################################################################
 # Antigen
 ####################################################################################################
 
-source ~/.powerlevel10k/powerlevel10k.zsh-theme
+eval "$(/opt/homebrew/bin/brew shellenv)" # Make sure we can access things installed by Homebrew
 
-source /usr/local/share/antigen/antigen.zsh
+source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 
-antigen use oh-my-zsh
+source /opt/homebrew/share/antigen/antigen.zsh
 
+# Silence antigen because it complains if things are already installed
+CASE_INSENSITIVE=true
+antigen use oh-my-zsh  > /dev/null
 
 ####################################################################################################
 # ZSH
 ####################################################################################################
-DISABLE_AUTO_TITLE="true"
-ENABLE_CORRECTION="true"
+DISABLE_AUTO_TITLE=true
+ENABLE_CORRECTION=true
 
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-completions
+# Silence antigen because it complains if things are already installed
+antigen bundle zsh-users/zsh-syntax-highlighting > /dev/null
+antigen bundle zsh-users/zsh-autosuggestions > /dev/null
+antigen bundle zsh-users/zsh-completions > /dev/null
 
 # Use Vi mode
 export KEYTIMEOUT=1
@@ -136,6 +133,7 @@ function precmd() {
 ####################################################################################################
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH="/Applications/gtkwave.app/Contents/Resources/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 export PATH="$PATH:/Users/ariporad/Library/Python/3.8/bin"
 export PATH="$PATH:$HOME/.bin"
@@ -145,6 +143,7 @@ export PATH="$PATH:./node_modules/.bin" # Use local node modules like an npm scr
 export PATH="$PATH:/Library/TeX/texbin"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin" # Postgres.app
 export PATH="$PATH:$HOME/.yarn/bin"
+export PATH="$PATH:$HOME/go/bin"
 # We add `yarn global bin` later once we setup nvm
 
 ####################################################################################################
@@ -204,6 +203,7 @@ alias gvim="mvim"
 alias ll="ls -lah"
 alias pi="ping 8.8.8.8"
 alias lisp="sbcl"
+alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
 
 # MATLAB
 export MATLAB="/Applications/MATLAB_R2021a.app"
@@ -289,7 +289,7 @@ function ct() {
 
 	shift
 
-	source ~/.anaconda3/bin/activate
+# source ~/.anaconda3/bin/activate  # commented out by conda initialize
 
 	jupyter notebook
 
@@ -298,3 +298,23 @@ function ct() {
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export OPENSSL_ROOT_DIR=/opt/homebrew/opt/openssl@3
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init --path)"
+
+# Make sure XQuartz will work from a Docker Container
+# From: https://gist.github.com/paul-krohn/e45f96181b1cf5e536325d1bdee6c94
+# TODO: Investigate this more in-depth 
+#xhost "+$(hostname)" > /dev/null
+#export DISPLAY=":0"
+
+# opam configuration
+[[ ! -r /Users/ariporad/.opam/opam-init/init.zsh ]] || source /Users/ariporad/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+

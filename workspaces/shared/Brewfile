@@ -59,6 +59,8 @@ brew "tmux"
 brew "vim"
 # Internet file retriever
 brew "wget"
+# ZSH Theme
+brew "romkatv/powerlevel10k/powerlevel10k"
 
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
