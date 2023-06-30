@@ -1,7 +1,5 @@
 # This is Git's per-user configuration file.
-[user]
-	name = Ari Porad
-	email = ari@ariporad.com
+
 [push]
 	default = simple
 [core]
@@ -40,3 +38,13 @@
 	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 [mergetool]
 	prompt = false
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+
+# Include machine-specific config
+[include]
+	path = .gitconfig.local
