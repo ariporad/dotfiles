@@ -1,0 +1,801 @@
+﻿Area Code,Description
+200,Not in Use
+201,"NJ, US"
+202,"DC, US"
+203,"CT, US"
+204,"Manitoba, Canada"
+205,"AL, US"
+206,"WA, US"
+207,"ME, US"
+208,"ID, US"
+209,"CA, US"
+210,"TX, US"
+211,Not in Use
+212,"NY, US"
+213,"CA, US"
+214,"TX, US"
+215,"PA, US"
+216,"OH, US"
+217,"IL, US"
+218,"MN, US"
+219,"IN, US"
+220,"OH, US"
+221,Not in Use
+222,Not in Use
+223,"PA, US"
+224,"IL, US"
+225,"LA, US"
+226,"Ontario, Canada"
+227,Not in Use
+228,"MS, US"
+229,"GA, US"
+230,Not in Use
+231,"MI, US"
+232,Not in Use
+233,Not in Use
+234,"OH, US"
+235,Not in Use
+236,"British Columbia, Canada"
+237,Not in Use
+238,Not in Use
+239,"FL, US"
+240,"MD, US"
+241,Not in Use
+242,Bahamas
+243,Not in Use
+244,Not in Use
+245,Not in Use
+246,Barbados
+247,Not in Use
+248,"MI, US"
+249,"Ontario, Canada"
+250,"British Columbia, Canada"
+251,"AL, US"
+252,"NC, US"
+253,"WA, US"
+254,"TX, US"
+255,Not in Use
+256,"AL, US"
+257,Not in Use
+258,Not in Use
+259,Not in Use
+260,"IN, US"
+261,Not in Use
+262,"WI, US"
+263,Not in Use
+264,Anguilla
+265,Not in Use
+266,Not in Use
+267,"PA, US"
+268,Antigua/Barbuda
+269,"MI, US"
+270,"KY, US"
+271,Not in Use
+272,"PA, US"
+273,Not in Use
+274,Not in Use
+275,Not in Use
+276,"VA, US"
+277,Not in Use
+278,Not in Use
+279,"CA, US"
+280,Not in Use
+281,"TX, US"
+282,Not in Use
+283,Not in Use
+284,British Virgin Islands
+285,Not in Use
+286,Not in Use
+287,Not in Use
+288,Not in Use
+289,"Ontario, Canada"
+290,Not in Use
+291,Not in Use
+292,Not in Use
+293,Not in Use
+294,Not in Use
+295,Not in Use
+296,Not in Use
+297,Not in Use
+298,Not in Use
+299,Not in Use
+300,Not in Use
+301,"MD, US"
+302,"DE, US"
+303,"CO, US"
+304,"WV, US"
+305,"FL, US"
+306,"Saskatchewan, Canada"
+307,"WY, US"
+308,"NE, US"
+309,"IL, US"
+310,"CA, US"
+311,Not in Use
+312,"IL, US"
+313,"MI, US"
+314,"MO, US"
+315,"NY, US"
+316,"KS, US"
+317,"IN, US"
+318,"LA, US"
+319,"IA, US"
+320,"MN, US"
+321,"FL, US"
+322,Not in Use
+323,"CA, US"
+324,Not in Use
+325,"TX, US"
+326,"OH, US"
+327,Not in Use
+328,Not in Use
+329,Not in Use
+330,"OH, US"
+331,"IL, US"
+332,"NY, US"
+333,Not in Use
+334,"AL, US"
+335,Not in Use
+336,"NC, US"
+337,"LA, US"
+338,Not in Use
+339,"MA, US"
+340,"USVI, US"
+341,"CA, US"
+342,Not in Use
+343,"Ontario, Canada"
+344,Not in Use
+345,Cayman Islands
+346,"TX, US"
+347,"NY, US"
+348,Not in Use
+349,Not in Use
+350,Not in Use
+351,"MA, US"
+352,"FL, US"
+353,Not in Use
+354,Not in Use
+355,Not in Use
+356,Not in Use
+357,Not in Use
+358,Not in Use
+359,Not in Use
+360,"WA, US"
+361,"TX, US"
+362,Not in Use
+363,Not in Use
+364,"KY, US"
+365,"Ontario, Canada"
+366,Not in Use
+367,"Quebec, Canada"
+368,Not in Use
+369,Not in Use
+370,Not in Use
+371,Not in Use
+372,Not in Use
+373,Not in Use
+374,Not in Use
+375,Not in Use
+376,Not in Use
+377,Not in Use
+378,Not in Use
+379,Not in Use
+380,"OH, US"
+381,Not in Use
+382,Not in Use
+383,Not in Use
+384,Not in Use
+385,"UT, US"
+386,"FL, US"
+387,Not in Use
+388,Not in Use
+389,Not in Use
+390,Not in Use
+391,Not in Use
+392,Not in Use
+393,Not in Use
+394,Not in Use
+395,Not in Use
+396,Not in Use
+397,Not in Use
+398,Not in Use
+399,Not in Use
+400,Not in Use
+401,"RI, US"
+402,"NE, US"
+403,"Alberta, Canada"
+404,"GA, US"
+405,"OK, US"
+406,"MT, US"
+407,"FL, US"
+408,"CA, US"
+409,"TX, US"
+410,"MD, US"
+411,Not in Use
+412,"PA, US"
+413,"MA, US"
+414,"WI, US"
+415,"CA, US"
+416,"Ontario, Canada"
+417,"MO, US"
+418,"Quebec, Canada"
+419,"OH, US"
+420,Not in Use
+421,Not in Use
+422,Not in Use
+423,"TN, US"
+424,"CA, US"
+425,"WA, US"
+426,Not in Use
+427,Not in Use
+428,Not in Use
+429,Not in Use
+430,"TX, US"
+431,"Manitoba, Canada"
+432,"TX, US"
+433,Not in Use
+434,"VA, US"
+435,"UT, US"
+436,Not in Use
+437,"Ontario, Canada"
+438,"Quebec, Canada"
+439,Not in Use
+440,"OH, US"
+441,Bermuda
+442,"CA, US"
+443,"MD, US"
+444,Not in Use
+445,"PA, US"
+446,Not in Use
+447,"IL, US"
+448,"FL, US"
+449,Not in Use
+450,"Quebec, Canada"
+451,Not in Use
+452,Not in Use
+453,Not in Use
+454,Not in Use
+455,Not in Use
+456,Not in Use
+457,Not in Use
+458,"OR, US"
+459,Not in Use
+460,Not in Use
+461,Not in Use
+462,Not in Use
+463,"IN, US"
+464,"IL, US"
+465,Not in Use
+466,Not in Use
+467,Not in Use
+468,Not in Use
+469,"TX, US"
+470,"GA, US"
+471,Not in Use
+472,Not in Use
+473,Grenada
+474,"Saskatchewan, Canada"
+475,"CT, US"
+476,Not in Use
+477,Not in Use
+478,"GA, US"
+479,"AR, US"
+480,"AZ, US"
+481,Not in Use
+482,Not in Use
+483,Not in Use
+484,"PA, US"
+485,Not in Use
+486,Not in Use
+487,Not in Use
+488,Not in Use
+489,Not in Use
+490,Not in Use
+491,Not in Use
+492,Not in Use
+493,Not in Use
+494,Not in Use
+495,Not in Use
+496,Not in Use
+497,Not in Use
+498,Not in Use
+499,Not in Use
+500,Non-Geographic Services
+501,"AR, US"
+502,"KY, US"
+503,"OR, US"
+504,"LA, US"
+505,"NM, US"
+506,"New Brunswick, Canada"
+507,"MN, US"
+508,"MA, US"
+509,"WA, US"
+510,"CA, US"
+511,Not in Use
+512,"TX, US"
+513,"OH, US"
+514,"Quebec, Canada"
+515,"IA, US"
+516,"NY, US"
+517,"MI, US"
+518,"NY, US"
+519,"Ontario, Canada"
+520,"AZ, US"
+521,Non-Geographic Services
+522,Non-Geographic Services
+523,Non-Geographic Services
+524,Non-Geographic Services
+525,Non-Geographic Services
+526,Non-Geographic Services
+527,Non-Geographic Services
+528,Non-Geographic Services
+529,Not in Use
+530,"CA, US"
+531,"NE, US"
+532,Not in Use
+533,Non-Geographic Services
+534,"WI, US"
+535,Not in Use
+536,Not in Use
+537,Not in Use
+538,Not in Use
+539,"OK, US"
+540,"VA, US"
+541,"OR, US"
+542,Not in Use
+543,Not in Use
+544,Non-Geographic Services
+545,Not in Use
+546,Not in Use
+547,Not in Use
+548,"Ontario, Canada"
+549,Not in Use
+550,Not in Use
+551,"NJ, US"
+552,Not in Use
+553,Not in Use
+554,Not in Use
+555,Not in Use
+556,Not in Use
+557,Not in Use
+558,Not in Use
+559,"CA, US"
+560,Not in Use
+561,"FL, US"
+562,"CA, US"
+563,"IA, US"
+564,"WA, US"
+565,Not in Use
+566,Non-Geographic Services
+567,"OH, US"
+568,Not in Use
+569,Not in Use
+570,"PA, US"
+571,"VA, US"
+572,"OK, US"
+573,"MO, US"
+574,"IN, US"
+575,"NM, US"
+576,Not in Use
+577,Non-Geographic Services
+578,Not in Use
+579,"Quebec, Canada"
+580,"OK, US"
+581,"Quebec, Canada"
+582,"PA, US"
+583,Not in Use
+584,Not in Use
+585,"NY, US"
+586,"MI, US"
+587,"Alberta, Canada"
+588,Non-Geographic Services
+589,Not in Use
+590,Not in Use
+591,Not in Use
+592,Not in Use
+593,Not in Use
+594,Not in Use
+595,Not in Use
+596,Not in Use
+597,Not in Use
+598,Not in Use
+599,Not in Use
+600,Canadian Non-Geographic Tariffed Services
+601,"MS, US"
+602,"AZ, US"
+603,"NH, US"
+604,"British Columbia, Canada"
+605,"SD, US"
+606,"KY, US"
+607,"NY, US"
+608,"WI, US"
+609,"NJ, US"
+610,"PA, US"
+611,Not in Use
+612,"MN, US"
+613,"Ontario, Canada"
+614,"OH, US"
+615,"TN, US"
+616,"MI, US"
+617,"MA, US"
+618,"IL, US"
+619,"CA, US"
+620,"KS, US"
+621,Not in Use
+622,Canadian Non-Geographic Services
+623,"AZ, US"
+624,Not in Use
+625,Not in Use
+626,"CA, US"
+627,Not in Use
+628,"CA, US"
+629,"TN, US"
+630,"IL, US"
+631,"NY, US"
+632,Not in Use
+633,Not in Use
+634,Not in Use
+635,Not in Use
+636,"MO, US"
+637,Not in Use
+638,Not in Use
+639,"Saskatchewan, Canada"
+640,"NJ, US"
+641,"IA, US"
+642,Not in Use
+643,Not in Use
+644,Not in Use
+645,Not in Use
+646,"NY, US"
+647,"Ontario, Canada"
+648,Not in Use
+649,Turks & Caicos Islands
+650,"CA, US"
+651,"MN, US"
+652,Not in Use
+653,Not in Use
+654,Not in Use
+655,Not in Use
+656,"FL, US"
+657,"CA, US"
+658,Jamaica
+659,"AL, US"
+660,"MO, US"
+661,"CA, US"
+662,"MS, US"
+663,Not in Use
+664,Montserrat
+665,Not in Use
+666,Not in Use
+667,"MD, US"
+668,Not in Use
+669,"CA, US"
+670,"CNMI, US"
+671,"GU, US"
+672,"British Columbia, Canada"
+673,Not in Use
+674,Not in Use
+675,Not in Use
+676,Not in Use
+677,Not in Use
+678,"GA, US"
+679,Not in Use
+680,"NY, US"
+681,"WV, US"
+682,"TX, US"
+683,Not in Use
+684,"AS, US"
+685,Not in Use
+686,Not in Use
+687,Not in Use
+688,Not in Use
+689,"FL, US"
+690,Not in Use
+691,Not in Use
+692,Not in Use
+693,Not in Use
+694,Not in Use
+695,Not in Use
+696,Not in Use
+697,Not in Use
+698,Not in Use
+699,Not in Use
+700,Interexchange Carrier Services
+701,"ND, US"
+702,"NV, US"
+703,"VA, US"
+704,"NC, US"
+705,"Ontario, Canada"
+706,"GA, US"
+707,"CA, US"
+708,"IL, US"
+709,"Newfoundland And Labrador, Canada"
+710,Us Government
+711,Not in Use
+712,"IA, US"
+713,"TX, US"
+714,"CA, US"
+715,"WI, US"
+716,"NY, US"
+717,"PA, US"
+718,"NY, US"
+719,"CO, US"
+720,"CO, US"
+721,Sint Maarten
+722,Not in Use
+723,Not in Use
+724,"PA, US"
+725,"NV, US"
+726,"TX, US"
+727,"FL, US"
+728,Not in Use
+729,Not in Use
+730,Not in Use
+731,"TN, US"
+732,"NJ, US"
+733,Not in Use
+734,"MI, US"
+735,Not in Use
+736,Not in Use
+737,"TX, US"
+738,Not in Use
+739,Not in Use
+740,"OH, US"
+741,Not in Use
+742,"Ontario, Canada"
+743,"NC, US"
+744,Not in Use
+745,Not in Use
+746,Not in Use
+747,"CA, US"
+748,Not in Use
+749,Not in Use
+750,Not in Use
+751,Not in Use
+752,Not in Use
+753,Not in Use
+754,"FL, US"
+755,Not in Use
+756,Not in Use
+757,"VA, US"
+758,St. Lucia
+759,Not in Use
+760,"CA, US"
+761,Not in Use
+762,"GA, US"
+763,"MN, US"
+764,Not in Use
+765,"IN, US"
+766,Not in Use
+767,Dominica
+768,Not in Use
+769,"MS, US"
+770,"GA, US"
+771,"DC, US"
+772,"FL, US"
+773,"IL, US"
+774,"MA, US"
+775,"NV, US"
+776,Not in Use
+777,Not in Use
+778,"British Columbia, Canada"
+779,"IL, US"
+780,"Alberta, Canada"
+781,"MA, US"
+782,"Nova Scotia - Prince Edward Island, Canada"
+783,Not in Use
+784,St. Vincent & Grenadines
+785,"KS, US"
+786,"FL, US"
+787,"PR, US"
+788,Not in Use
+789,Not in Use
+790,Not in Use
+791,Not in Use
+792,Not in Use
+793,Not in Use
+794,Not in Use
+795,Not in Use
+796,Not in Use
+797,Not in Use
+798,Not in Use
+799,Not in Use
+800,Toll-Free
+801,"UT, US"
+802,"VT, US"
+803,"SC, US"
+804,"VA, US"
+805,"CA, US"
+806,"TX, US"
+807,"Ontario, Canada"
+808,"HI, US"
+809,Dominican Republic
+810,"MI, US"
+811,Not in Use
+812,"IN, US"
+813,"FL, US"
+814,"PA, US"
+815,"IL, US"
+816,"MO, US"
+817,"TX, US"
+818,"CA, US"
+819,"Quebec, Canada"
+820,"CA, US"
+821,Not in Use
+822,Not in Use
+823,Not in Use
+824,Not in Use
+825,"Alberta, Canada"
+826,Not in Use
+827,Not in Use
+828,"NC, US"
+829,Dominican Republic
+830,"TX, US"
+831,"CA, US"
+832,"TX, US"
+833,Toll-Free
+834,Not in Use
+835,Not in Use
+836,Not in Use
+837,Not in Use
+838,"NY, US"
+839,"SC, US"
+840,"CA, US"
+841,Not in Use
+842,Not in Use
+843,"SC, US"
+844,Toll-Free
+845,"NY, US"
+846,Not in Use
+847,"IL, US"
+848,"NJ, US"
+849,Dominican Republic
+850,"FL, US"
+851,Not in Use
+852,Not in Use
+853,Not in Use
+854,"SC, US"
+855,Toll-Free
+856,"NJ, US"
+857,"MA, US"
+858,"CA, US"
+859,"KY, US"
+860,"CT, US"
+861,Not in Use
+862,"NJ, US"
+863,"FL, US"
+864,"SC, US"
+865,"TN, US"
+866,Toll-Free
+867,"Yukon-Nw Terr. - Nunavut, Canada"
+868,"Trinidad & Tobago, Trinidad And Tobago"
+869,"St. Kitts & Nevis, St. Kitts And Nevis"
+870,"AR, US"
+871,Not in Use
+872,"IL, US"
+873,"Quebec, Canada"
+874,Not in Use
+875,Not in Use
+876,Jamaica
+877,Toll-Free
+878,"PA, US"
+879,Not in Use
+880,Not in Use
+881,Not in Use
+882,Not in Use
+883,Not in Use
+884,Not in Use
+885,Not in Use
+886,Not in Use
+887,Not in Use
+888,Toll-Free
+889,Not in Use
+890,Not in Use
+891,Not in Use
+892,Not in Use
+893,Not in Use
+894,Not in Use
+895,Not in Use
+896,Not in Use
+897,Not in Use
+898,Not in Use
+899,Not in Use
+900,Premium Services
+901,"TN, US"
+902,"Nova Scotia - Prince Edward Island, Canada"
+903,"TX, US"
+904,"FL, US"
+905,"Ontario, Canada"
+906,"MI, US"
+907,"AK, US"
+908,"NJ, US"
+909,"CA, US"
+910,"NC, US"
+911,Not in Use
+912,"GA, US"
+913,"KS, US"
+914,"NY, US"
+915,"TX, US"
+916,"CA, US"
+917,"NY, US"
+918,"OK, US"
+919,"NC, US"
+920,"WI, US"
+921,Not in Use
+922,Not in Use
+923,Not in Use
+924,Not in Use
+925,"CA, US"
+926,Not in Use
+927,Not in Use
+928,"AZ, US"
+929,"NY, US"
+930,"IN, US"
+931,"TN, US"
+932,Not in Use
+933,Not in Use
+934,"NY, US"
+935,Not in Use
+936,"TX, US"
+937,"OH, US"
+938,"AL, US"
+939,"PUERTO RICO, US"
+940,"TX, US"
+941,"FL, US"
+942,Not in Use
+943,Not in Use
+944,Not in Use
+945,"TX, US"
+946,Not in Use
+947,"MI, US"
+948,Not in Use
+949,"CA, US"
+950,Not in Use
+951,"CA, US"
+952,"MN, US"
+953,Not in Use
+954,"FL, US"
+955,Not in Use
+956,"TX, US"
+957,Not in Use
+958,Not in Use
+959,"CT, US"
+960,Not in Use
+961,Not in Use
+962,Not in Use
+963,Not in Use
+964,Not in Use
+965,Not in Use
+966,Not in Use
+967,Not in Use
+968,Not in Use
+969,Not in Use
+970,"CO, US"
+971,"OR, US"
+972,"TX, US"
+973,"NJ, US"
+974,Not in Use
+975,Not in Use
+976,Not in Use
+977,Not in Use
+978,"MA, US"
+979,"TX, US"
+980,"NC, US"
+981,Not in Use
+982,Not in Use
+983,Not in Use
+984,"NC, US"
+985,"LA, US"
+986,"ID, US"
+987,Not in Use
+988,Not in Use
+989,"MI, US"
+990,Not in Use
+991,Not in Use
+992,Not in Use
+993,Not in Use
+994,Not in Use
+995,Not in Use
+996,Not in Use
+997,Not in Use
+998,Not in Use
+999,Not in Use

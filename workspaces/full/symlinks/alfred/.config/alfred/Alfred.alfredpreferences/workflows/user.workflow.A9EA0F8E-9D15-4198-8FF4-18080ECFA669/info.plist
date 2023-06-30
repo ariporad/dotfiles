@@ -51,7 +51,7 @@
 	<key>description</key>
 	<string>Convert units</string>
 	<key>disabled</key>
-	<false/>
+	<true/>
 	<key>name</key>
 	<string>Units</string>
 	<key>objects</key>

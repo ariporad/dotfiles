@@ -94,7 +94,7 @@
 	<key>description</key>
 	<string>Units - the ultimate unit converter</string>
 	<key>disabled</key>
-	<false/>
+	<true/>
 	<key>name</key>
 	<string>DAS.units.3.4</string>
 	<key>objects</key>

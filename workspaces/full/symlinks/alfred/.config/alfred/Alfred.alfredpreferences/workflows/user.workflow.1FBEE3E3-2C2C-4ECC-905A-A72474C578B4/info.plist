@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.alexmartinfr.alfred-wordreference</string>
+	<key>connections</key>
+	<dict>
+		<key>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>11D5721D-E45C-4D45-82C8-2CC370002271</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A1D85762-4AEF-4F68-8581-6B851D501875</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EB45D64F-0315-437B-9DF8-82B9FE57B3A7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E79DF520-6857-47B7-BDC5-4422BD5645D7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>05644DBC-EC92-42B4-AA1F-904EA1863EA2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Alex Martin</string>
+	<key>description</key>
+	<string>Translations at your fingertips!</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>WordReference for Alfred</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>fren</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>French to English translation</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://www.wordreference.com/fren/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>11D5721D-E45C-4D45-82C8-2CC370002271</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://www.wordreference.com/enfr/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>05644DBC-EC92-42B4-AA1F-904EA1863EA2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>enfr</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>English to French translation</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>E79DF520-6857-47B7-BDC5-4422BD5645D7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://www.wordreference.com/conj/frverbs.aspx?v={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>EB45D64F-0315-437B-9DF8-82B9FE57B3A7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>conj</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>French conjugation</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>A1D85762-4AEF-4F68-8581-6B851D501875</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>📚 WordReference for Alfred
+===========================
+
+# Up-to-date README:
+--------------------
+
+https://github.com/AlexMartinFR/alfred-wordreference/blob/main/README.md
+
+
+# Translation shortcuts:
+------------------------
+
+- `aren`: Arabic to English
+
+- `zhen`: Chinese to English
+
+- `czen`: Czech to English
+
+- `nlen`: Dutch to English
+
+- `enar`: English to Arabic
+- `enzh`: English to Chinese
+- `encz`: English to Czech
+- `ennl`: English to Dutch
+- `enfr`: English to French
+- `ende`: English to German
+- `engr`: English to Greek
+- `enit`: English to Italian
+- `enja`: English to Japanese
+- `enko`: English to Korean
+- `enpl`: English to Polish
+- `enpt`: English to Portuguese
+- `enro`: English to Romanian
+- `enru`: English to Russian
+- `enes`: English to Spanish
+- `ensv`: English to Swedish
+- `entr`: English to Turkish
+
+- `fren`: French to English
+- `frit`: French to Italian
+- `fres`: French to Spanish
+
+- `deen`: German to English
+- `dees`: German to Spanish
+
+- `gren`: Greek to English
+
+- `iten`: Italian to English
+
+- `jaen`: Japanese to English
+
+- `koen`: Korean to English
+
+- `plen`: Polish to English
+
+- `ptes`: Portuguese to Spanish
+- `pten`: Portuguese to English
+
+- `roen`: Romanian to English
+
+- `ruen`: Russian to English
+
+- `esen`: Spanish to English
+- `esfr`: Spanish to French
+- `esde`: Spanish to German
+- `esit`: Spanish to Italian
+- `espt`: Spanish to Portuguese
+
+- `sven`: Swedish to English
+
+- `tren`: Turkish to English
+
+
+# Other shortcuts:
+------------------
+
+- `def`: definition of a word
+- `syn`: synonyms of a word
+- `use`: usage examples of a word
+- `col`: list of composites containing a word
+- `conj`: conjugations of a verb</string>
+	<key>uidata</key>
+	<dict>
+		<key>05644DBC-EC92-42B4-AA1F-904EA1863EA2</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>170</integer>
+		</dict>
+		<key>11D5721D-E45C-4D45-82C8-2CC370002271</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>6E4EEBD5-0AB8-4986-8EC0-1CD707F41689</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>A1D85762-4AEF-4F68-8581-6B851D501875</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>290</integer>
+		</dict>
+		<key>E79DF520-6857-47B7-BDC5-4422BD5645D7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>170</integer>
+		</dict>
+		<key>EB45D64F-0315-437B-9DF8-82B9FE57B3A7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>290</integer>
+		</dict>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/AlexMartinFR/alfred-wordreference/</string>
+</dict>
+</plist>

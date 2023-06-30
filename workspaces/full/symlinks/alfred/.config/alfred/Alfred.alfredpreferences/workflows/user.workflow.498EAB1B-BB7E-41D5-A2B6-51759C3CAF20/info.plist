@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.ariporad.alfred.area-code-lookup</string>
+	<key>connections</key>
+	<dict>
+		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
+		<array/>
+	</dict>
+	<key>createdby</key>
+	<string>Ari Porad</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Area Code Lookup</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>area code</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>#!/bin/bash
+
+query="{query}"
+
+if [ ${#query} -lt 3 ]; then
+
+cat &lt;&lt; EOF
+{"items": [
+    {
+        "uid": "result",
+		"valid": false,
+        "title": "Lookup Area Code $query",
+		"subtitle": "Area codes must be three digits long"
+    }
+]}
+EOF
+
+exit
+
+elif [ ${#query} -gt 3 ]; then
+
+cat &lt;&lt; EOF
+{"items": [
+    {
+        "uid": "result",
+		"valid": false,
+        "title": "Invalid Area Code $query",
+		"subtitle": "Area codes must be three digits long"
+    }
+]}
+EOF
+
+exit
+
+fi
+
+grep '{query}' area_codes.csv &gt; /dev/null
+exists=$?
+
+if [ $exists -ne 0 ]; then
+
+cat &lt;&lt; EOF
+{"items": [
+    {
+        "uid": "result",
+        "title": "Area Code Not Found: $query",
+		"subtitle": "All area codes are 3 digit numbers ≥200",
+		"valid": false
+    }
+]}
+EOF
+
+
+exit
+
+else
+
+desc=$(sed -nr 's/^{query},"?([A-Za-z0-9\, ]+)"?/\1/p' area_codes.csv | tr -d '\n\r')
+
+cat &lt;&lt; EOF
+{"items": [
+    {
+        "uid": "result",
+        "title": "Area Code $query: $desc"
+    }
+]}
+EOF
+
+exit
+
+fi</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Lookup Area Code {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Easily lookup the geographic location of a North American area code.
+
+Data from NANPA: https://nationalnanpa.com/area_codes/</string>
+	<key>uidata</key>
+	<dict>
+		<key>7DD3BDE5-A157-42E5-9376-F681FB50A4EE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>55</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

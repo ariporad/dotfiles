@@ -326,7 +326,7 @@
 	<key>description</key>
 	<string>Color tools for developers</string>
 	<key>disabled</key>
-	<false/>
+	<true/>
 	<key>name</key>
 	<string>Colors v2.0.2</string>
 	<key>objects</key>
