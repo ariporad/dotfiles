@@ -3,8 +3,18 @@ set -ev
 
 shopt -s dotglob
 
-# Install Everything
+# Install Brew Packages
 brew bundle install
+
+# Install Python properly
+
+# Download a Font
+mkdir -p ~/Downloads/Fonts
+pushd ~/Downloads/Fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/SourceCodePro.zip
+unzip *.zip
+open *.ttf
+popd
 
 # Configure Some Settings
 defaults write com.apple.Finder AppleShowAllFiles -bool YES
