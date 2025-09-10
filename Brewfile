@@ -2,27 +2,13 @@
 # Initially generated via `brew bundle dump --describe`, but then cleaned up manually.
 ##
 
-# Taps
-tap "homebrew/core"
-tap "homebrew/cask"
-tap "homebrew/bundle"
-tap "zero-sh/tap"
-
 # Plugin manager for zsh, inspired by oh-my-zsh and vundle
 brew "antigen"
-# Radically simple personal bootstrapping tool for macOS
-brew "zero-sh/tap/zero"
 
 ###
 # Basic Dependencies
 ###
 
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
-# Automatic configure script builder
-brew "autoconf"
-# Tool for generating GNU Standards-compliant Makefiles
-brew "automake"
 # Cross-platform make
 brew "cmake"
 # GNU File, Shell, and Text utilities
@@ -35,16 +21,15 @@ brew "git"
 ###
 # Programming Environment
 ###
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8", link: true
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Add GitHub support to git on the command-line
 brew "hub"
-# Ruby version manager (includes Ruby)
-brew "rbenv"
-# JavaScript package manager (includes Node)
-brew "yarn"
+# Node.js
+brew "node"
+# Python version management
+brew "pyenv"
+brew "pyenv-virtualenv"
 
 ###
 # Terminal Environment
@@ -60,11 +45,10 @@ brew "vim"
 # Internet file retriever
 brew "wget"
 # ZSH Theme
-brew "romkatv/powerlevel10k/powerlevel10k"
+brew "powerlevel10k"
 
-# Password manager that keeps all passwords secure behind one password
-cask "1password"
-# Web browser
+# Web browsers
+cask "arc"
 cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
@@ -72,6 +56,14 @@ cask "iterm2"
 cask "spotify"
 # Spotify and iTunes in the menu bar
 cask "spotmenu"
+# Application launcher and productivity software
+cask "alfred"
+# Menu bar icon organizer
+cask "vanilla"
+# Keyboard customizer
+cask "karabiner-elements"
+# Text editor
+cask "macvim"
 
 ###
 # App Store Apps
@@ -79,3 +71,5 @@ cask "spotmenu"
 mas "OneTab", id: 1540160809
 mas "PiPifier", id: 1160374471
 mas "Refined GitHub", id: 1519867270
+mas "Amphetamine", id: 937984704
+mas "Moom", id: 419330170

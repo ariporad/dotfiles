@@ -1,0 +1,1 @@
+antigen apply # actually setup the plugins
