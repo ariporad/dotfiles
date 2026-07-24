@@ -4,9 +4,7 @@ set -ev
 shopt -s dotglob
 
 # Install Brew Packages
-brew bundle install
-
-# Install Python properly
+brew bundle install || echo "Brew failed. Continuing..."
 
 # Download a Font
 mkdir -p ~/Downloads/Fonts
