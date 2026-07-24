@@ -1,0 +1,64 @@
+{
+  "model": "opus[1m]",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh",
+    "padding": 0
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/bell.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/bell.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  },
+  "sandbox": {
+    "enabled": true,
+    "network": {
+      "allowedDomains": [
+        "::1",
+        "127.0.0.1",
+        "localhost",
+        "tibook"
+      ],
+      "allowUnixSockets": [
+        "/Users/ariporad/.docker/run/docker.sock"
+      ],
+      "allowLocalBinding": true
+    },
+    "filesystem": {
+      "allowWrite": [
+        "~/.npm/",
+        "~/Library/Caches/pip",
+        "~/.local/lib/python*/site-packages"
+      ]
+    }
+  },
+  "tui": "fullscreen",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
+  "verbose": true,
+  "autoCompactEnabled": true,
+  "agentPushNotifEnabled": true,
+  "voiceEnabled": true,
+  "remoteControlAtStartup": true
+}

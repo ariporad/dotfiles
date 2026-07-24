@@ -1,1 +1,0 @@
-/Users/ariporad/.dotfiles/symlinks/.vim

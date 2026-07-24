@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>RefreshRate</key>
+	<string>0</string>
+	<key>TOKEN</key>
+	<string>5a24a2916186947833f91fcccc19f2f2262e963e</string>
+	<key>alltasks_keyword</key>
+	<string>!a</string>
+	<key>duetoday_keyword</key>
+	<string>!t</string>
+	<key>newtask_keyword</key>
+	<string>!!</string>
+	<key>overdue_keyword</key>
+	<string>!o</string>
+	<key>taskOpen</key>
+	<string>app</string>
+</dict>
+</plist>

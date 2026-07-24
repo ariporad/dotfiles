@@ -2,12 +2,11 @@
 
 [push]
 	default = simple
+	autoSetupRemote = true
 [core]
 	excludesfile = ~/.gitignore_global
 [rerere]
 	enabled = true
-[url "git@github.com:"]
-	insteadOf = https://github.com/
 [hub]
 	protocol = ssh
 [alias]
@@ -38,6 +37,8 @@
 	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 [mergetool]
 	prompt = false
+# SSH-based signing via 1Password. Not enabled by default -- sign explicitly
+# with `git commit -S` when a given repo wants it.
 [gpg]
 	format = ssh
 [gpg "ssh"]
@@ -46,3 +47,11 @@
 # Include machine-specific config
 [include]
 	path = .gitconfig.local
+[advice]
+	skippedCherryPicks = false
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
