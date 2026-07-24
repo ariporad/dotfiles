@@ -8,6 +8,9 @@
 # Karabiner creates tons of automatic backups that we want to ignore, because they're noisy
 symlinks/.config/karabiner/automatic_backups
 
+# Don't mirror vim plugins
+symlinks/.vim/plugged
+
 ### Python ###
 # Bytecode is regenerated on first run and tied to whichever interpreter
 # happened to be around. Mostly arrives via Alfred workflows that ship their
