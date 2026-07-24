@@ -8,6 +8,30 @@
 # Karabiner creates tons of automatic backups that we want to ignore, because they're noisy
 workspaces/full/symlinks/karabiner/.config/karabiner/automatic_backups
 
+### Python ###
+# Bytecode is regenerated on first run and tied to whichever interpreter
+# happened to be around. Mostly arrives via Alfred workflows that ship their
+# own Python libraries, but there's no reason to want it anywhere.
+__pycache__/
+*.py[cod]
+
+### Alfred ###
+# The workflows themselves are worth keeping -- these are just the debris that
+# accumulates around them.
+
+# When Alfred resolves a sync conflict it keeps the losing copy alongside the
+# winner as `original1.<name>`. Every one of these has a live sibling.
+symlinks/.config/alfred/**/original1.*
+
+# Dropbox sync conflicts, all from 2018-2019.
+symlinks/.config/alfred/**/*conflicted copy*
+
+# NOTE: workflow `vendor/` directories are deliberately NOT ignored. Alfred has
+# no install step, so a PHP workflow's bundled dependencies have to be checked
+# in or the workflow simply won't run on a fresh machine. Same reasoning would
+# apply to a workflow vendoring node_modules, which the global rule above would
+# otherwise swallow -- none do today.
+
 ### Git ###
 *.orig
 
