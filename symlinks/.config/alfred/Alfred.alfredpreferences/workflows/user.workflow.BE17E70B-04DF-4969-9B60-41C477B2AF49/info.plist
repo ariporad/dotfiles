@@ -88,7 +88,7 @@
 	<key>description</key>
 	<string>Hashing strings</string>
 	<key>disabled</key>
-	<false/>
+	<true/>
 	<key>name</key>
 	<string>Hash (v1.1)</string>
 	<key>objects</key>

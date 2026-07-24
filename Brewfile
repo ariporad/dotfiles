@@ -40,6 +40,8 @@ brew "the_silver_searcher"
 brew "thefuck"
 # Terminal multiplexer
 brew "tmux"
+# Vi 'workalike' with many additional features
+brew "vim"
 # Internet file retriever
 brew "wget"
 # ZSH Theme

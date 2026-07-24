@@ -6,7 +6,7 @@
 !.ssh
 
 # Karabiner creates tons of automatic backups that we want to ignore, because they're noisy
-workspaces/full/symlinks/karabiner/.config/karabiner/automatic_backups
+symlinks/.config/karabiner/automatic_backups
 
 ### Python ###
 # Bytecode is regenerated on first run and tied to whichever interpreter
