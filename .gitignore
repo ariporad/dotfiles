@@ -11,6 +11,14 @@ symlinks/.config/karabiner/automatic_backups
 # Don't mirror vim plugins
 symlinks/.vim/plugged
 
+# Auth state, not config: `hub` keeps a plaintext oauth_token and `gh` keeps its
+# credentials in hosts.yml. The preferences next door (gh/config.yml) are tracked.
+symlinks/.config/hub
+symlinks/.config/gh/hosts.yml
+
+# zsh recompiles these on startup, so they come back as soon as they're deleted
+*.zwc
+
 ### Python ###
 # Bytecode is regenerated on first run and tied to whichever interpreter
 # happened to be around. Mostly arrives via Alfred workflows that ship their
