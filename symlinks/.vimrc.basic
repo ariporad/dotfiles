@@ -96,6 +96,14 @@ vnoremap <leader>y "+y
 " use escape to end a search
 nnoremap <silent> <Esc> :nohlsearch<CR><Esc>
 
+" easy switch between buffers
+" Press Tab to go to the next buffer, Shift+Tab for previous
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
+" Press Leader + b to list buffers and prepare the switch command
+nnoremap <Leader>b :ls<CR>:b<Space>
+
 set laststatus=2                " always show the status line
 set hidden                      " don't hide buffers that are in the background
 set autowrite                   " save the buffer when it enters the background

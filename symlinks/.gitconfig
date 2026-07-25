@@ -24,6 +24,8 @@
 	rebase = false
 [rebase]
 	autoStash = true
+[advice]
+	skippedCherryPicks = false
 [diff "jupyternotebook"]
 	command = git-nbdiffdriver diff
 [merge "jupyternotebook"]
@@ -37,21 +39,14 @@
 	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 [mergetool]
 	prompt = false
-# SSH-based signing via 1Password. Not enabled by default -- sign explicitly
+
+# SSH-based signing (usually via 1Password). Not enabled by default -- sign explicitly
 # with `git commit -S` when a given repo wants it.
 [gpg]
 	format = ssh
 [gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	allowedSignersFile = ~/.git_allowed_signers
 
 # Include machine-specific config
 [include]
 	path = .gitconfig.local
-[advice]
-	skippedCherryPicks = false
-[credential "https://github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
